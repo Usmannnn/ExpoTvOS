@@ -1,0 +1,6 @@
+const TYPES = {
+	SET_CURRENT_FOCUS: 'SET_CURRENT_FOCUS',
+	NAVIGATE: 'NAVIGATE',
+};
+
+export default TYPES;
