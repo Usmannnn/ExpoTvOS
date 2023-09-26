@@ -1,7 +1,7 @@
-import { Image, View } from 'react-native';
+import { Image } from 'react-native';
 import React from 'react';
 import { useApp } from '../../context';
-import { GetScaledValue } from '../../methods';
+import LinearGradient from 'react-native-linear-gradient';
 
 interface DataModel {
 	albumId: number;
@@ -123,13 +123,12 @@ const TrailerContent = () => {
 	const { currentFocus } = useApp();
 
 	return (
-		<View style={{ flex: 1 }}>
+		<LinearGradient style={{ flex: 1 }} colors={['white', 'black', 'black']}>
 			<Image
 				source={{ uri: data[currentFocus.itemIndex].url }}
-				style={[{ height: GetScaledValue(630) }]}
-				blurRadius={10}
+				style={[{ flex: 1, opacity: 0.8 }]}
 			/>
-		</View>
+		</LinearGradient>
 	);
 };
 

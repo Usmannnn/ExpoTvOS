@@ -8,7 +8,6 @@ import Animated, {
 } from 'react-native-reanimated';
 import { appActions, useApp } from '../context';
 import SectionOrganism from '../components/organisms/SectionOrganism';
-import { GetScaledValue } from '../methods';
 
 export interface IPopulatedArrowPress {
 	direction: string;

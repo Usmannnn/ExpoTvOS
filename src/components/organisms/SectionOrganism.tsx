@@ -35,7 +35,7 @@ const SectionOrganism = ({
 	const onEnterPress = useCallback(() => {
 		if (sectionIndex === 4) {
 			measure.value = {
-				x: GetScaledValue(measure.value.x * 3),
+				x: GetScaledValue(1200),
 				y: measure.value.y,
 			};
 		}
