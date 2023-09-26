@@ -65,8 +65,11 @@ const useFocusHandler = () => {
 				const downValue = currentSection.height + 10 * 2;
 				scroll.value = scroll.value - downValue;
 
-				if (currentFocus.sectionIndex === 3) contentY.value = 0;
-				else contentY.value = initialContentPosition;
+				if (currentFocus.sectionIndex === 3) {
+					contentY.value = 0;
+				} else {
+					contentY.value = initialContentPosition;
+				}
 
 				if (sectionIndex <= currentFocus.sectionIndex) {
 					opacity.value = interpolate(
@@ -87,8 +90,11 @@ const useFocusHandler = () => {
 
 				opacity.value = interpolate(upValue, [0, 1], [0, 1], Extrapolate.CLAMP);
 
-				if (currentFocus.sectionIndex - 1 === 4) contentY.value = 0;
-				else contentY.value = initialContentPosition;
+				if (currentFocus.sectionIndex - 1 === 4) {
+					contentY.value = 0;
+				} else {
+					contentY.value = initialContentPosition;
+				}
 
 				break;
 			case AbstractKeys.RIGHT:
@@ -118,8 +124,9 @@ const useFocusHandler = () => {
 
 				if (currentFocus.itemIndex > sectionLength - viewableItem) {
 					border.value -= itemWidth;
-				} else if (currentFocus.itemIndex === sectionLength - viewableItem)
+				} else if (currentFocus.itemIndex === sectionLength - viewableItem) {
 					border.value = 0;
+				}
 
 				break;
 			default:

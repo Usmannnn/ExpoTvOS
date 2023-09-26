@@ -13,7 +13,7 @@ const RootNavigationContainer = () => {
 					flexDirection: 'row',
 					backgroundColor: 'black',
 				}}>
-				{/* <Sidebar /> */}
+				<Sidebar />
 				<HomeStack />
 			</View>
 		</NavigationContainer>

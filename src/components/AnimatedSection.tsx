@@ -8,6 +8,8 @@ import Animated, {
 } from 'react-native-reanimated';
 import { appActions, useApp } from '../context';
 import SectionOrganism from '../components/organisms/SectionOrganism';
+import { AbstractKeys } from '../FocusHelper';
+import { useFocusable } from '@noriginmedia/norigin-spatial-navigation';
 
 export interface IPopulatedArrowPress {
 	direction: string;
@@ -27,11 +29,19 @@ const AnimatedSection = () => {
 	const scroll = useSharedValue(0);
 	const contentY = useSharedValue(initialContentPosition);
 
+	const { setFocus } = useFocusable();
 	const { setNextFocus, scrollToDirection } = useFocusHandler();
 
 	const onArrowPress = useCallback(
 		(props: IPopulatedArrowPress) => {
 			let nextFocusKey = setNextFocus(props);
+
+			if (
+				currentFocus.itemIndex === 0 &&
+				props.direction === AbstractKeys.LEFT
+			) {
+				setFocus('icon0');
+			}
 
 			if (nextFocusKey) {
 				appDispatch(appActions.setCurrentFocus(nextFocusKey));
