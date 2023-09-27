@@ -23,7 +23,7 @@ const App = () => {
 	}
 
 	useEffect(() => {
-		setFocus('section0_item0');
+		setFocus('icon0');
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 

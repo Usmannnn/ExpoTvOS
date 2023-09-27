@@ -1,4 +1,7 @@
 {
   "name": "ExpoTvos",
-  "displayName": "ExpoTvos"
+  "displayName": "ExpoTvos",
+  "web": {
+    "bundler": "metro"
+  }
 }

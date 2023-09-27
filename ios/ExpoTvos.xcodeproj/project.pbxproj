@@ -1019,7 +1019,7 @@
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_CPLUSPLUSFLAGS = "$(inherited)";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
-				SDKROOT = iphoneos;
+				SDKROOT = appletvos;
 			};
 			name = Debug;
 		};
@@ -1079,7 +1079,7 @@
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_CPLUSPLUSFLAGS = "$(inherited)";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
-				SDKROOT = iphoneos;
+				SDKROOT = appletvos;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
