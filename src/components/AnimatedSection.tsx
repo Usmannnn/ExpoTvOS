@@ -10,6 +10,7 @@ import { appActions, useApp } from '../context';
 import SectionOrganism from '../components/organisms/SectionOrganism';
 import { AbstractKeys } from '../FocusHelper';
 import { useFocusable } from '@noriginmedia/norigin-spatial-navigation';
+import { GetScaledValue } from '../methods';
 
 export interface IPopulatedArrowPress {
 	direction: string;
@@ -113,5 +114,7 @@ const styles = StyleSheet.create({
 		position: 'absolute',
 		zIndex: 99,
 		backgroundColor: 'black',
+		left: GetScaledValue(200),
+		right: 0,
 	},
 });

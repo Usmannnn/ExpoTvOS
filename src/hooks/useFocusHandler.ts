@@ -4,6 +4,7 @@ import { useFocusable } from '@noriginmedia/norigin-spatial-navigation';
 import { FlatList, useWindowDimensions } from 'react-native';
 import { Extrapolate, SharedValue, interpolate } from 'react-native-reanimated';
 import { useApp } from '../context';
+import { GetScaledValue } from '../methods';
 
 const useFocusHandler = () => {
 	const { currentFocus, data, initialContentPosition } = useApp();
@@ -106,7 +107,8 @@ const useFocusHandler = () => {
 				if (currentFocus.itemIndex + 1 === sectionLength - viewableItem) {
 					border.value =
 						Math.round(width) -
-						itemWidth * (sectionLength - currentFocus.itemIndex - 1);
+						itemWidth * (sectionLength - currentFocus.itemIndex - 1) -
+						GetScaledValue(200);
 				} else if (currentFocus.itemIndex + 1 > sectionLength - viewableItem) {
 					border.value += itemWidth;
 				}

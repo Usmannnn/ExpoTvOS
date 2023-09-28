@@ -7,6 +7,9 @@ import {
 } from '@noriginmedia/norigin-spatial-navigation';
 import useFocusHandler from '../hooks/useFocusHandler';
 import Animated, {
+	FadeIn,
+	FadeOut,
+	Layout,
 	useAnimatedStyle,
 	withTiming,
 } from 'react-native-reanimated';
@@ -36,20 +39,29 @@ const Sidebar = () => {
 		<Animated.View style={[styles.container, animatedOpacity]}>
 			<FocusContext.Provider value={focusKey}>
 				<View ref={ref}>
-					{[
-						...new Array(10)
-							.fill(0)
-							.map((_, index) => (
-								<FocusableSidebarItem
-									key={index}
-									focusKey={`icon${index}`}
-									rightFocusKey={'section0_item0'}
-									downFocusKey={`icon${index + 1}`}
-									upFocusKey={`icon${index - 1}`}
-									onArrowPress={onArrowPress}
-								/>
-							)),
-					]}
+					<FocusableTopSection
+						hasFocusedChild={hasFocusedChild}
+						focusKey="profile"
+						onArrowPress={onArrowPress}
+					/>
+
+					<View
+						style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+						{[
+							...new Array(10)
+								.fill(0)
+								.map((_, index) => (
+									<FocusableSidebarItem
+										key={index}
+										focusKey={`icon${index}`}
+										rightFocusKey={'section0_item0'}
+										downFocusKey={`icon${index + 1}`}
+										upFocusKey={index === 0 ? 'profile' : `icon${index - 1}`}
+										onArrowPress={onArrowPress}
+									/>
+								)),
+						]}
+					</View>
 				</View>
 			</FocusContext.Provider>
 			{hasFocusedChild && <SidebarOverlay />}
@@ -68,8 +80,8 @@ const styles = StyleSheet.create({
 		bottom: 0,
 		backgroundColor: 'black',
 		zIndex: 999,
-		justifyContent: 'center',
 		alignItems: 'center',
+		paddingVertical: GetScaledValue(100),
 	},
 });
 
@@ -98,15 +110,67 @@ export const FocusableSidebarItem = ({
 
 	return (
 		<FocusContext.Provider value={_focusKey}>
-			<View ref={ref} style={{ margin: 10 }}>
+			<View ref={ref}>
 				<Text
 					style={{
 						color: focused ? '#ffbc00' : 'white',
 						fontWeight: focused ? 'bold' : 'normal',
 						fontSize: GetScaledValue(focused ? 40 : 35),
 					}}>
-					icon
+					ic
 				</Text>
+			</View>
+		</FocusContext.Provider>
+	);
+};
+
+export const FocusableTopSection = ({
+	hasFocusedChild,
+	focusKey,
+	onArrowPress,
+}: {
+	hasFocusedChild: boolean;
+	focusKey: string;
+	onArrowPress: any;
+}) => {
+	const {
+		ref,
+		focusKey: _focusKey,
+		focused,
+	} = useFocusable({
+		focusKey,
+		onArrowPress: (direction, props) => onArrowPress({ direction, props }),
+		extraProps: { downFocusKey: 'icon0', rightFocusKey: 'section0_item0' },
+	});
+
+	return (
+		<FocusContext.Provider value={_focusKey}>
+			<View ref={ref}>
+				{!hasFocusedChild ? (
+					<Animated.Image
+						layout={Layout}
+						entering={FadeIn.duration(1000)}
+						exiting={FadeOut.duration(1000)}
+						source={require('../../assets/tod-logo.png')}
+						style={{
+							width: 200,
+							aspectRatio: 1,
+						}}
+					/>
+				) : (
+					<Animated.View
+						layout={Layout}
+						entering={FadeIn.duration(1000)}
+						exiting={FadeOut.duration(1000)}
+						style={{
+							width: 110,
+							aspectRatio: 1,
+							backgroundColor: 'red',
+							borderWidth: focused ? 5 : 0,
+							borderColor: '#ffbc00',
+						}}
+					/>
+				)}
 			</View>
 		</FocusContext.Provider>
 	);
