@@ -11,6 +11,7 @@ import Animated, {
 	withTiming,
 } from 'react-native-reanimated';
 import Video from 'react-native-video';
+import { GetScaledValue } from '../../methods';
 
 const ItemOrganism = ({
 	item,
@@ -88,7 +89,7 @@ const ItemOrganism = ({
 					},
 				]}>
 				{!item.uri ? (
-					<Text>{_focusKey}</Text>
+					<Text style={{ fontSize: GetScaledValue(28) }}>{_focusKey}</Text>
 				) : expand ? (
 					<Video
 						ref={video}

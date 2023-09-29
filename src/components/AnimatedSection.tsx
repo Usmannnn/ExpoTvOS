@@ -25,7 +25,7 @@ export interface IPopulatedArrowPress {
 const AnimatedSection = () => {
 	const { initialContentPosition, data, currentFocus, appDispatch } = useApp();
 
-	const border = useSharedValue(0);
+	const border = useSharedValue(GetScaledValue(200));
 	const opacity = useSharedValue(1);
 	const scroll = useSharedValue(0);
 	const contentY = useSharedValue(initialContentPosition);
@@ -113,8 +113,5 @@ const styles = StyleSheet.create({
 	container: {
 		position: 'absolute',
 		zIndex: 99,
-		backgroundColor: 'black',
-		left: GetScaledValue(200),
-		right: 0,
 	},
 });

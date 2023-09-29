@@ -557,7 +557,7 @@ Skipping bundling in Debug for the Simulator (since the packager bundles for you
 
 /Users/osmanoruc/Desktop/ExpoTvos/ios/Pods/Pods.xcodeproj: warning: The tvOS Simulator deployment target 'TVOS_DEPLOYMENT_TARGET' is set to 9.0, but the range of supported deployment target versions is 11.0 to 16.4.99. (in target 'BVLinearGradient-tvOS' from project 'Pods')
 /Users/osmanoruc/Desktop/ExpoTvos/ios/Pods/Pods.xcodeproj: warning: The tvOS Simulator deployment target 'TVOS_DEPLOYMENT_TARGET' is set to 9.0, but the range of supported deployment target versions is 11.0 to 16.4.99. (in target 'react-native-video-tvOS' from project 'Pods')
-/Users/osmanoruc/Desktop/ExpoTvos/ios/Pods/Pods.xcodeproj: warning: The tvOS Simulator deployment target 'TVOS_DEPLOYMENT_TARGET' is set to 9.0, but the range of supported deployment target versions is 11.0 to 16.4.99. (in target 'RNReanimated-tvOS' from project 'Pods')
 /Users/osmanoruc/Desktop/ExpoTvos/ios/Pods/Pods.xcodeproj: warning: The tvOS Simulator deployment target 'TVOS_DEPLOYMENT_TARGET' is set to 10.0, but the range of supported deployment target versions is 11.0 to 16.4.99. (in target 'libevent-tvOS' from project 'Pods')
+/Users/osmanoruc/Desktop/ExpoTvos/ios/Pods/Pods.xcodeproj: warning: The tvOS Simulator deployment target 'TVOS_DEPLOYMENT_TARGET' is set to 9.0, but the range of supported deployment target versions is 11.0 to 16.4.99. (in target 'RNReanimated-tvOS' from project 'Pods')
 ** BUILD SUCCEEDED **
 

@@ -1,4 +1,4 @@
-import { FlatList } from 'react-native';
+import { FlatList, View } from 'react-native';
 import React, { useCallback, useRef } from 'react';
 import { IData } from '../../context/App/initialState';
 import ItemOrganism from './ItemOrganism';
@@ -62,6 +62,24 @@ const SectionOrganism = ({
 			<FlatList
 				ref={listRef}
 				horizontal
+				style={{
+					paddingLeft: GetScaledValue(200),
+				}}
+				ListFooterComponent={() => {
+					return (
+						<View
+							style={{
+								marginRight: GetScaledValue(210),
+								marginLeft: 10,
+								width: GetScaledValue(200),
+								backgroundColor: 'gray',
+								height: item.height,
+								marginVertical: 10,
+								borderRadius: 10,
+							}}
+						/>
+					);
+				}}
 				data={item.data}
 				showsHorizontalScrollIndicator={false}
 				keyExtractor={(_, index) => index.toString()}

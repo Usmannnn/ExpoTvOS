@@ -37,7 +37,7 @@ const useFocusHandler = () => {
 		border: SharedValue<number>
 	) => {
 		scroll.value = 0;
-		border.value = 0;
+		border.value = GetScaledValue(200);
 		listRef.current?.scrollToOffset({ offset: 0, animated: true });
 	};
 
@@ -98,18 +98,20 @@ const useFocusHandler = () => {
 
 				break;
 			case AbstractKeys.RIGHT:
-				listRef.current?.scrollToIndex({
+				listRef.current?.scrollToOffset({
 					animated: true,
-					index: currentFocus.itemIndex + 1,
-					viewOffset: 1,
+					offset: (currentFocus.itemIndex + 1) * itemWidth,
 				});
 
-				if (currentFocus.itemIndex + 1 === sectionLength - viewableItem) {
-					border.value =
-						Math.round(width) -
-						itemWidth * (sectionLength - currentFocus.itemIndex - 1) -
-						GetScaledValue(200);
-				} else if (currentFocus.itemIndex + 1 > sectionLength - viewableItem) {
+				const _vOffset = width - (220 + (viewableItem - 1) * itemWidth);
+				if (currentFocus.itemIndex === sectionLength - viewableItem) {
+					border.value = _vOffset < 200 ? 200 : _vOffset;
+				} else if (
+					currentFocus.itemIndex - 1 ===
+					sectionLength - viewableItem
+				) {
+					border.value = itemWidth + _vOffset;
+				} else if (currentFocus.itemIndex > sectionLength - viewableItem) {
 					border.value += itemWidth;
 				}
 
@@ -122,11 +124,7 @@ const useFocusHandler = () => {
 					viewOffset: 0,
 				});
 
-				if (currentFocus.itemIndex > sectionLength - viewableItem) {
-					border.value -= itemWidth;
-				} else if (currentFocus.itemIndex === sectionLength - viewableItem) {
-					border.value = 0;
-				}
+				border.value = GetScaledValue(200);
 
 				break;
 			default:
