@@ -103,9 +103,12 @@ const useFocusHandler = () => {
 					offset: (currentFocus.itemIndex + 1) * itemWidth,
 				});
 
-				const _vOffset = width - (220 + (viewableItem - 1) * itemWidth);
+				const _vOffset =
+					width - (GetScaledValue(210) + (viewableItem - 1) * itemWidth);
+
 				if (currentFocus.itemIndex === sectionLength - viewableItem) {
-					border.value = _vOffset < 200 ? 200 : _vOffset;
+					border.value =
+						_vOffset < GetScaledValue(200) ? GetScaledValue(200) : _vOffset;
 				} else if (
 					currentFocus.itemIndex - 1 ===
 					sectionLength - viewableItem
@@ -124,7 +127,9 @@ const useFocusHandler = () => {
 					viewOffset: 0,
 				});
 
-				border.value = GetScaledValue(200);
+				let offset = border.value - itemWidth;
+				border.value =
+					offset < GetScaledValue(200) ? GetScaledValue(200) : offset;
 
 				break;
 			default:

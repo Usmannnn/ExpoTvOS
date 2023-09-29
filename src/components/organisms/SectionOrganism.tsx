@@ -70,7 +70,6 @@ const SectionOrganism = ({
 						<View
 							style={{
 								marginRight: GetScaledValue(210),
-								marginLeft: 10,
 								width: GetScaledValue(200),
 								backgroundColor: 'gray',
 								height: item.height,
