@@ -6,14 +6,345 @@ User defaults from command line:
 
 Prepare packages
 
-Computing target dependency graph and provisioning inputs
-
-Create build description
-
+ComputeTargetDependencyGraph
 note: Building targets in dependency order
-ClangStatCache /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/AppleTVSimulator.platform/Developer/SDKs/AppleTVSimulator16.4.sdk /Users/osmanoruc/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/appletvsimulator16.4-20L489-.sdkstatcache
+note: Target dependency graph (49 targets)
+    Target 'ExpoTvos-tvOS' in project 'ExpoTvos'
+        ➜ Implicit dependency on target 'Pods-ExpoTvos-tvOS' in project 'Pods' via file 'libPods-ExpoTvos-tvOS.a' in build phase 'Link Binary'
+        ➜ Implicit dependency on target 'BVLinearGradient-tvOS' in project 'Pods' via options '-lBVLinearGradient-tvOS' in build setting 'OTHER_LDFLAGS'
+        ➜ Implicit dependency on target 'DoubleConversion-tvOS' in project 'Pods' via options '-lDoubleConversion-tvOS' in build setting 'OTHER_LDFLAGS'
+        ➜ Implicit dependency on target 'RCT-Folly-tvOS' in project 'Pods' via options '-lRCT-Folly-tvOS' in build setting 'OTHER_LDFLAGS'
+        ➜ Implicit dependency on target 'RCTTypeSafety-tvOS' in project 'Pods' via options '-lRCTTypeSafety-tvOS' in build setting 'OTHER_LDFLAGS'
+        ➜ Implicit dependency on target 'RNReanimated-tvOS' in project 'Pods' via options '-lRNReanimated-tvOS' in build setting 'OTHER_LDFLAGS'
+        ➜ Implicit dependency on target 'RNScreens-tvOS' in project 'Pods' via options '-lRNScreens-tvOS' in build setting 'OTHER_LDFLAGS'
+        ➜ Implicit dependency on target 'React-Codegen-tvOS' in project 'Pods' via options '-lReact-Codegen-tvOS' in build setting 'OTHER_LDFLAGS'
+        ➜ Implicit dependency on target 'React-Core-tvOS' in project 'Pods' via options '-lReact-Core-tvOS' in build setting 'OTHER_LDFLAGS'
+        ➜ Implicit dependency on target 'React-CoreModules-tvOS' in project 'Pods' via options '-lReact-CoreModules-tvOS' in build setting 'OTHER_LDFLAGS'
+        ➜ Implicit dependency on target 'React-NativeModulesApple-tvOS' in project 'Pods' via options '-lReact-NativeModulesApple-tvOS' in build setting 'OTHER_LDFLAGS'
+        ➜ Implicit dependency on target 'React-RCTAnimation-tvOS' in project 'Pods' via options '-lReact-RCTAnimation-tvOS' in build setting 'OTHER_LDFLAGS'
+        ➜ Implicit dependency on target 'React-RCTAppDelegate-tvOS' in project 'Pods' via options '-lReact-RCTAppDelegate-tvOS' in build setting 'OTHER_LDFLAGS'
+        ➜ Implicit dependency on target 'React-RCTBlob-tvOS' in project 'Pods' via options '-lReact-RCTBlob-tvOS' in build setting 'OTHER_LDFLAGS'
+        ➜ Implicit dependency on target 'React-RCTImage-tvOS' in project 'Pods' via options '-lReact-RCTImage-tvOS' in build setting 'OTHER_LDFLAGS'
+        ➜ Implicit dependency on target 'React-RCTLinking-tvOS' in project 'Pods' via options '-lReact-RCTLinking-tvOS' in build setting 'OTHER_LDFLAGS'
+        ➜ Implicit dependency on target 'React-RCTNetwork-tvOS' in project 'Pods' via options '-lReact-RCTNetwork-tvOS' in build setting 'OTHER_LDFLAGS'
+        ➜ Implicit dependency on target 'React-RCTSettings-tvOS' in project 'Pods' via options '-lReact-RCTSettings-tvOS' in build setting 'OTHER_LDFLAGS'
+        ➜ Implicit dependency on target 'React-RCTText-tvOS' in project 'Pods' via options '-lReact-RCTText-tvOS' in build setting 'OTHER_LDFLAGS'
+        ➜ Implicit dependency on target 'React-cxxreact-tvOS' in project 'Pods' via options '-lReact-cxxreact-tvOS' in build setting 'OTHER_LDFLAGS'
+        ➜ Implicit dependency on target 'React-debug-tvOS' in project 'Pods' via options '-lReact-debug-tvOS' in build setting 'OTHER_LDFLAGS'
+        ➜ Implicit dependency on target 'React-hermes-tvOS' in project 'Pods' via options '-lReact-hermes-tvOS' in build setting 'OTHER_LDFLAGS'
+        ➜ Implicit dependency on target 'React-jsi-tvOS' in project 'Pods' via options '-lReact-jsi-tvOS' in build setting 'OTHER_LDFLAGS'
+        ➜ Implicit dependency on target 'React-jsiexecutor-tvOS' in project 'Pods' via options '-lReact-jsiexecutor-tvOS' in build setting 'OTHER_LDFLAGS'
+        ➜ Implicit dependency on target 'React-jsinspector-tvOS' in project 'Pods' via options '-lReact-jsinspector-tvOS' in build setting 'OTHER_LDFLAGS'
+        ➜ Implicit dependency on target 'React-logger-tvOS' in project 'Pods' via options '-lReact-logger-tvOS' in build setting 'OTHER_LDFLAGS'
+        ➜ Implicit dependency on target 'React-perflogger-tvOS' in project 'Pods' via options '-lReact-perflogger-tvOS' in build setting 'OTHER_LDFLAGS'
+        ➜ Implicit dependency on target 'React-runtimescheduler-tvOS' in project 'Pods' via options '-lReact-runtimescheduler-tvOS' in build setting 'OTHER_LDFLAGS'
+        ➜ Implicit dependency on target 'React-utils-tvOS' in project 'Pods' via options '-lReact-utils-tvOS' in build setting 'OTHER_LDFLAGS'
+        ➜ Implicit dependency on target 'ReactCommon-tvOS' in project 'Pods' via options '-lReactCommon-tvOS' in build setting 'OTHER_LDFLAGS'
+        ➜ Implicit dependency on target 'SocketRocket-tvOS' in project 'Pods' via options '-lSocketRocket-tvOS' in build setting 'OTHER_LDFLAGS'
+        ➜ Implicit dependency on target 'Yoga-tvOS' in project 'Pods' via options '-lYoga-tvOS' in build setting 'OTHER_LDFLAGS'
+        ➜ Implicit dependency on target 'fmt-tvOS' in project 'Pods' via options '-lfmt-tvOS' in build setting 'OTHER_LDFLAGS'
+        ➜ Implicit dependency on target 'glog-tvOS' in project 'Pods' via options '-lglog-tvOS' in build setting 'OTHER_LDFLAGS'
+        ➜ Implicit dependency on target 'libevent-tvOS' in project 'Pods' via options '-llibevent-tvOS' in build setting 'OTHER_LDFLAGS'
+        ➜ Implicit dependency on target 'react-native-safe-area-context-tvOS' in project 'Pods' via options '-lreact-native-safe-area-context-tvOS' in build setting 'OTHER_LDFLAGS'
+        ➜ Implicit dependency on target 'react-native-video-tvOS' in project 'Pods' via options '-lreact-native-video-tvOS' in build setting 'OTHER_LDFLAGS'
+    Target 'Pods-ExpoTvos-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'BVLinearGradient-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'DoubleConversion-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'FBLazyVector-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'FBReactNativeSpec-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'RCT-Folly-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'RCTRequired-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'RCTTypeSafety-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'RNReanimated-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'RNScreens-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-Codegen-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-Core-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-CoreModules-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-NativeModulesApple-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-RCTActionSheet-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-RCTAnimation-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-RCTAppDelegate-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-RCTBlob-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-RCTImage-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-RCTLinking-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-RCTNetwork-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-RCTSettings-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-RCTText-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-callinvoker-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-cxxreact-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-debug-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-hermes-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-jsi-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-jsiexecutor-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-jsinspector-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-logger-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-perflogger-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-rncore-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-runtimeexecutor-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-runtimescheduler-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-utils-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'ReactCommon-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'SocketRocket-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'Yoga-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'boost-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'fmt-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'glog-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'hermes-engine-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'libevent-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'react-native-safe-area-context-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'react-native-video-tvOS' in project 'Pods'
+    Target 'react-native-video-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-Core-tvOS' in project 'Pods'
+    Target 'react-native-safe-area-context-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-Core-tvOS' in project 'Pods'
+    Target 'React-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-Core-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-RCTAnimation-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-RCTBlob-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-RCTImage-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-RCTLinking-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-RCTNetwork-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-RCTSettings-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-RCTText-tvOS' in project 'Pods'
+    Target 'React-RCTActionSheet-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-Core-tvOS' in project 'Pods'
+    Target 'RNScreens-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-Core-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-RCTImage-tvOS' in project 'Pods'
+    Target 'RNReanimated-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'DoubleConversion-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'FBLazyVector-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'RCT-Folly-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'RCTRequired-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'RCTTypeSafety-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-Core-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-CoreModules-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-RCTAnimation-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-RCTAppDelegate-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-RCTBlob-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-RCTImage-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-RCTLinking-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-RCTNetwork-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-RCTSettings-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-RCTText-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-callinvoker-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-cxxreact-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-jsi-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-jsiexecutor-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-jsinspector-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'ReactCommon-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'Yoga-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'glog-tvOS' in project 'Pods'
+    Target 'React-RCTText-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-Core-tvOS' in project 'Pods'
+    Target 'React-RCTSettings-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'RCT-Folly-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'RCTTypeSafety-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-Codegen-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-Core-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-jsi-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'ReactCommon-tvOS' in project 'Pods'
+    Target 'React-RCTLinking-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-Codegen-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-Core-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-jsi-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'ReactCommon-tvOS' in project 'Pods'
+    Target 'React-RCTAppDelegate-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'RCT-Folly-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'RCTRequired-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'RCTTypeSafety-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-Core-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-CoreModules-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-NativeModulesApple-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-RCTImage-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-RCTNetwork-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-hermes-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-runtimescheduler-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'ReactCommon-tvOS' in project 'Pods'
+    Target 'React-runtimescheduler-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'RCT-Folly-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-callinvoker-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-debug-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-jsi-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-runtimeexecutor-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'glog-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'hermes-engine-tvOS' in project 'Pods'
+    Target 'React-RCTAnimation-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'RCT-Folly-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'RCTTypeSafety-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-Codegen-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-Core-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-jsi-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'ReactCommon-tvOS' in project 'Pods'
+    Target 'React-CoreModules-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'RCT-Folly-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'RCTTypeSafety-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-Codegen-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-Core-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-RCTBlob-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-RCTImage-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-jsi-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'ReactCommon-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'SocketRocket-tvOS' in project 'Pods'
+    Target 'React-RCTImage-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'RCT-Folly-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'RCTTypeSafety-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-Codegen-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-Core-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-RCTNetwork-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-jsi-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'ReactCommon-tvOS' in project 'Pods'
+    Target 'React-RCTBlob-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'RCT-Folly-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-Codegen-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-Core-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-RCTNetwork-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-jsi-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'ReactCommon-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'hermes-engine-tvOS' in project 'Pods'
+    Target 'React-RCTNetwork-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'RCT-Folly-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'RCTTypeSafety-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-Codegen-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-Core-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-jsi-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'ReactCommon-tvOS' in project 'Pods'
+    Target 'React-Codegen-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'DoubleConversion-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'FBReactNativeSpec-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'RCT-Folly-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'RCTRequired-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'RCTTypeSafety-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-Core-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-NativeModulesApple-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-jsi-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-jsiexecutor-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-rncore-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'ReactCommon-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'glog-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'hermes-engine-tvOS' in project 'Pods'
+    Target 'React-rncore-tvOS' in project 'Pods' (no dependencies)
+    Target 'React-NativeModulesApple-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-Core-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-callinvoker-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-cxxreact-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-jsi-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-runtimeexecutor-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'ReactCommon-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'hermes-engine-tvOS' in project 'Pods'
+    Target 'FBReactNativeSpec-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'RCT-Folly-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'RCTRequired-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'RCTTypeSafety-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-Core-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-jsi-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'ReactCommon-tvOS' in project 'Pods'
+    Target 'ReactCommon-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'DoubleConversion-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'RCT-Folly-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-callinvoker-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-cxxreact-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-jsi-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-logger-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-perflogger-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'glog-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'hermes-engine-tvOS' in project 'Pods'
+    Target 'RCTTypeSafety-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'FBLazyVector-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'RCTRequired-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-Core-tvOS' in project 'Pods'
+    Target 'RCTRequired-tvOS' in project 'Pods' (no dependencies)
+    Target 'FBLazyVector-tvOS' in project 'Pods' (no dependencies)
+    Target 'BVLinearGradient-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-Core-tvOS' in project 'Pods'
+    Target 'React-Core-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'RCT-Folly-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-Core-tvOS-AccessibilityResources' in project 'Pods'
+        ➜ Explicit dependency on target 'React-cxxreact-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-hermes-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-jsi-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-jsiexecutor-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-jsinspector-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-perflogger-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-runtimeexecutor-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-utils-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'SocketRocket-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'Yoga-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'glog-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'hermes-engine-tvOS' in project 'Pods'
+    Target 'Yoga-tvOS' in project 'Pods' (no dependencies)
+    Target 'SocketRocket-tvOS' in project 'Pods' (no dependencies)
+    Target 'React-utils-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'RCT-Folly-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-debug-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'glog-tvOS' in project 'Pods'
+    Target 'React-hermes-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'DoubleConversion-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'RCT-Folly-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-cxxreact-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-jsi-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-jsiexecutor-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-jsinspector-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-perflogger-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'glog-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'hermes-engine-tvOS' in project 'Pods'
+    Target 'React-jsiexecutor-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'DoubleConversion-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'RCT-Folly-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-cxxreact-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-jsi-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-perflogger-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'glog-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'hermes-engine-tvOS' in project 'Pods'
+    Target 'React-cxxreact-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'DoubleConversion-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'RCT-Folly-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-callinvoker-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-debug-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-jsi-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-jsinspector-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-logger-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-perflogger-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-runtimeexecutor-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'boost-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'glog-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'hermes-engine-tvOS' in project 'Pods'
+    Target 'React-runtimeexecutor-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'React-jsi-tvOS' in project 'Pods'
+    Target 'React-perflogger-tvOS' in project 'Pods' (no dependencies)
+    Target 'React-logger-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'glog-tvOS' in project 'Pods'
+    Target 'React-jsinspector-tvOS' in project 'Pods' (no dependencies)
+    Target 'React-jsi-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'DoubleConversion-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'RCT-Folly-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'boost-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'glog-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'hermes-engine-tvOS' in project 'Pods'
+    Target 'hermes-engine-tvOS' in project 'Pods' (no dependencies)
+    Target 'React-debug-tvOS' in project 'Pods' (no dependencies)
+    Target 'React-callinvoker-tvOS' in project 'Pods' (no dependencies)
+    Target 'React-Core-tvOS-AccessibilityResources' in project 'Pods' (no dependencies)
+    Target 'RCT-Folly-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'DoubleConversion-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'boost-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'fmt-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'glog-tvOS' in project 'Pods'
+        ➜ Explicit dependency on target 'libevent-tvOS' in project 'Pods'
+    Target 'libevent-tvOS' in project 'Pods' (no dependencies)
+    Target 'glog-tvOS' in project 'Pods' (no dependencies)
+    Target 'fmt-tvOS' in project 'Pods' (no dependencies)
+    Target 'boost-tvOS' in project 'Pods' (no dependencies)
+    Target 'DoubleConversion-tvOS' in project 'Pods' (no dependencies)
+
+GatherProvisioningInputs
+
+CreateBuildDescription
+
+ClangStatCache /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/AppleTVSimulator.platform/Developer/SDKs/AppleTVSimulator17.0.sdk /Users/osmanoruc/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/appletvsimulator17.0-21J351-25a0e40260bb3038152d97ad1df42a55.sdkstatcache
     cd /Users/osmanoruc/Desktop/ExpoTvos/ios
-    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/AppleTVSimulator.platform/Developer/SDKs/AppleTVSimulator16.4.sdk -o /Users/osmanoruc/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/appletvsimulator16.4-20L489-.sdkstatcache
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/AppleTVSimulator.platform/Developer/SDKs/AppleTVSimulator17.0.sdk -o /Users/osmanoruc/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/appletvsimulator17.0-21J351-25a0e40260bb3038152d97ad1df42a55.sdkstatcache
 
 warning: Run script build phase 'Bundle React Native Code And Images' will be run during every build because it does not specify any outputs. To address this warning, either add output dependencies to the script phase, or configure it to run in every build by unchecking "Based on dependency analysis" in the script phase. (in target 'ExpoTvos-tvOS' from project 'ExpoTvos')
 warning: Run script build phase 'Start Packager' will be run during every build because it does not specify any outputs. To address this warning, either add output dependencies to the script phase, or configure it to run in every build by unchecking "Based on dependency analysis" in the script phase. (in target 'ExpoTvos-tvOS' from project 'ExpoTvos')
@@ -25,6 +356,7 @@ PhaseScriptExecution Bundle\ React\ Native\ Code\ And\ Images /Users/osmanoruc/L
     cd /Users/osmanoruc/Desktop/ExpoTvos/ios
     export ACTION\=build
     export AD_HOC_CODE_SIGNING_ALLOWED\=YES
+    export AGGREGATE_TRACKED_DOMAINS\=YES
     export ALLOW_TARGET_PLATFORM_SPECIALIZATION\=NO
     export ALTERNATE_GROUP\=staff
     export ALTERNATE_MODE\=u+w,go-w,a+rX
@@ -40,6 +372,7 @@ PhaseScriptExecution Bundle\ React\ Native\ Code\ And\ Images /Users/osmanoruc/L
     export APPLICATION_EXTENSION_API_ONLY\=NO
     export APPLY_RULES_IN_COPY_FILES\=NO
     export APPLY_RULES_IN_COPY_HEADERS\=NO
+    export APP_SHORTCUTS_ENABLE_FLEXIBLE_MATCHING\=YES
     export ARCHS\=arm64
     export ARCHS_STANDARD\=arm64\ x86_64
     export ARCHS_STANDARD_32_64_BIT\=arm64\ x86_64
@@ -47,10 +380,12 @@ PhaseScriptExecution Bundle\ React\ Native\ Code\ And\ Images /Users/osmanoruc/L
     export ARCHS_STANDARD_INCLUDING_64_BIT\=arm64\ x86_64
     export ARCHS_UNIVERSAL_IPHONE_OS\=arm64\ x86_64
     export ASSETCATALOG_COMPILER_APPICON_NAME\=App\ Icon\ \&\ Top\ Shelf\ Image
+    export ASSETCATALOG_COMPILER_GENERATE_ASSET_SYMBOLS\=YES
     export ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME\=LaunchImage
     export ASSETCATALOG_FILTER_FOR_DEVICE_MODEL\=AppleTV5,3
     export ASSETCATALOG_FILTER_FOR_DEVICE_OS_VERSION\=16.4
     export ASSETCATALOG_FILTER_FOR_THINNING_DEVICE_CONFIGURATION\=AppleTV5,3
+    export AUTOMATICALLY_MERGE_DEPENDENCIES\=NO
     export AVAILABLE_PLATFORMS\=appletvos\ appletvsimulator\ driverkit\ iphoneos\ iphonesimulator\ macosx\ watchos\ watchsimulator
     export AppIdentifierPrefix\=FAKETEAMID.
     export BITCODE_GENERATION_MODE\=marker
@@ -70,14 +405,16 @@ PhaseScriptExecution Bundle\ React\ Native\ Code\ And\ Images /Users/osmanoruc/L
     export BUNDLE_PLUGINS_FOLDER_PATH\=PlugIns
     export BUNDLE_PRIVATE_HEADERS_FOLDER_PATH\=PrivateHeaders
     export BUNDLE_PUBLIC_HEADERS_FOLDER_PATH\=Headers
-    export CACHE_ROOT\=/var/folders/gb/dx6y1bnd29g1g_h1kfrt4wtw0000gn/C/com.apple.DeveloperTools/14.3-14E222b/Xcode
-    export CCHROOT\=/var/folders/gb/dx6y1bnd29g1g_h1kfrt4wtw0000gn/C/com.apple.DeveloperTools/14.3-14E222b/Xcode
+    export CACHE_ROOT\=/var/folders/gb/dx6y1bnd29g1g_h1kfrt4wtw0000gn/C/com.apple.DeveloperTools/15.0-15A240d/Xcode
+    export CCHROOT\=/var/folders/gb/dx6y1bnd29g1g_h1kfrt4wtw0000gn/C/com.apple.DeveloperTools/15.0-15A240d/Xcode
     export CHMOD\=/bin/chmod
     export CHOWN\=/usr/sbin/chown
     export CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED\=YES
     export CLANG_ANALYZER_NONNULL\=YES
+    export CLANG_COMPILE_CACHE_PATH\=/Users/osmanoruc/Library/Developer/Xcode/DerivedData/CompilationCache.noindex
     export CLANG_CXX_LANGUAGE_STANDARD\=c++17
     export CLANG_CXX_LIBRARY\=libc++
+    export CLANG_ENABLE_EXPLICIT_MODULES\=NO
     export CLANG_ENABLE_MODULES\=YES
     export CLANG_ENABLE_OBJC_ARC\=YES
     export CLANG_MODULES_BUILD_SESSION_FILE\=/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/Session.modulevalidation
@@ -125,11 +462,10 @@ PhaseScriptExecution Bundle\ React\ Native\ Code\ And\ Images /Users/osmanoruc/L
     export COPYING_PRESERVES_HFS_DATA\=NO
     export COPY_HEADERS_RUN_UNIFDEF\=NO
     export COPY_PHASE_STRIP\=NO
-    export COPY_RESOURCES_FROM_STATIC_FRAMEWORKS\=YES
     export CORRESPONDING_DEVICE_PLATFORM_DIR\=/Applications/Xcode.app/Contents/Developer/Platforms/AppleTVOS.platform
     export CORRESPONDING_DEVICE_PLATFORM_NAME\=appletvos
-    export CORRESPONDING_DEVICE_SDK_DIR\=/Applications/Xcode.app/Contents/Developer/Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS16.4.sdk
-    export CORRESPONDING_DEVICE_SDK_NAME\=appletvos16.4
+    export CORRESPONDING_DEVICE_SDK_DIR\=/Applications/Xcode.app/Contents/Developer/Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS17.0.sdk
+    export CORRESPONDING_DEVICE_SDK_NAME\=appletvos17.0
     export CP\=/bin/cp
     export CREATE_INFOPLIST_SECTION_IN_BINARY\=NO
     export CURRENT_ARCH\=undefined_arch
@@ -144,7 +480,7 @@ PhaseScriptExecution Bundle\ React\ Native\ Code\ And\ Images /Users/osmanoruc/L
     export DEPLOYMENT_LOCATION\=NO
     export DEPLOYMENT_POSTPROCESSING\=NO
     export DEPLOYMENT_TARGET_SETTING_NAME\=TVOS_DEPLOYMENT_TARGET
-    export DEPLOYMENT_TARGET_SUGGESTED_VALUES\=11.0\ 11.1\ 11.2\ 11.3\ 11.4\ 12.0\ 12.1\ 12.2\ 12.3\ 12.4\ 13.0\ 13.2\ 13.3\ 13.4\ 14.0\ 14.2\ 14.3\ 14.4\ 14.5\ 14.6\ 14.7\ 15.0\ 15.1\ 15.2\ 15.3\ 15.4\ 15.5\ 15.6\ 16.0\ 16.1\ 16.2\ 16.3\ 16.4
+    export DEPLOYMENT_TARGET_SUGGESTED_VALUES\=12.0\ 12.1\ 12.2\ 12.3\ 12.4\ 13.0\ 13.2\ 13.3\ 13.4\ 14.0\ 14.2\ 14.3\ 14.4\ 14.5\ 14.6\ 14.7\ 15.0\ 15.1\ 15.2\ 15.3\ 15.4\ 15.5\ 15.6\ 16.0\ 16.1\ 16.2\ 16.3\ 16.4\ 16.5\ 16.6\ 17.0
     export DERIVED_FILES_DIR\=/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Intermediates.noindex/ExpoTvos.build/Debug-appletvsimulator/ExpoTvos-tvOS.build/DerivedSources
     export DERIVED_FILE_DIR\=/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Intermediates.noindex/ExpoTvos.build/Debug-appletvsimulator/ExpoTvos-tvOS.build/DerivedSources
     export DERIVED_SOURCES_DIR\=/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Intermediates.noindex/ExpoTvos.build/Debug-appletvsimulator/ExpoTvos-tvOS.build/DerivedSources
@@ -174,6 +510,7 @@ PhaseScriptExecution Bundle\ React\ Native\ Code\ And\ Images /Users/osmanoruc/L
     export EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE\=NO
     export ENABLE_APP_SANDBOX\=NO
     export ENABLE_BITCODE\=NO
+    export ENABLE_CODE_COVERAGE\=YES
     export ENABLE_DEFAULT_HEADER_SEARCH_PATHS\=YES
     export ENABLE_DEFAULT_SEARCH_PATHS\=YES
     export ENABLE_HARDENED_RUNTIME\=NO
@@ -184,6 +521,7 @@ PhaseScriptExecution Bundle\ React\ Native\ Code\ And\ Images /Users/osmanoruc/L
     export ENABLE_TESTABILITY\=YES
     export ENABLE_TESTING_SEARCH_PATHS\=NO
     export ENABLE_USER_SCRIPT_SANDBOXING\=NO
+    export ENABLE_XOJIT_PREVIEWS\=NO
     export ENTITLEMENTS_ALLOWED\=NO
     export ENTITLEMENTS_DESTINATION\=__entitlements
     export ENTITLEMENTS_REQUIRED\=NO
@@ -245,8 +583,10 @@ PhaseScriptExecution Bundle\ React\ Native\ Code\ And\ Images /Users/osmanoruc/L
     export HEADER_SEARCH_PATHS\=/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Products/Debug-appletvsimulator/include\ \ \"/Users/osmanoruc/Desktop/ExpoTvos/ios/Pods/Headers/Public\"\ \"/Users/osmanoruc/Desktop/ExpoTvos/ios/Pods/Headers/Public/BVLinearGradient\"\ \"/Users/osmanoruc/Desktop/ExpoTvos/ios/Pods/Headers/Public/DoubleConversion\"\ \"/Users/osmanoruc/Desktop/ExpoTvos/ios/Pods/Headers/Public/FBLazyVector\"\ \"/Users/osmanoruc/Desktop/ExpoTvos/ios/Pods/Headers/Public/RCT-Folly\"\ \"/Users/osmanoruc/Desktop/ExpoTvos/ios/Pods/Headers/Public/RCTRequired\"\ \"/Users/osmanoruc/Desktop/ExpoTvos/ios/Pods/Headers/Public/RCTTypeSafety\"\ \"/Users/osmanoruc/Desktop/ExpoTvos/ios/Pods/Headers/Public/RNReanimated\"\ \"/Users/osmanoruc/Desktop/ExpoTvos/ios/Pods/Headers/Public/RNScreens\"\ \"/Users/osmanoruc/Desktop/ExpoTvos/ios/Pods/Headers/Public/React-Codegen\"\ \"/Users/osmanoruc/Desktop/ExpoTvos/ios/Pods/Headers/Public/React-Core\"\ \"/Users/osmanoruc/Desktop/ExpoTvos/ios/Pods/Headers/Public/React-CoreModules\"\ \"/Users/osmanoruc/Desktop/ExpoTvos/ios/Pods/Headers/Public/React-NativeModulesApple\"\ \"/Users/osmanoruc/Desktop/ExpoTvos/ios/Pods/Headers/Public/React-RCTAnimation\"\ \"/Users/osmanoruc/Desktop/ExpoTvos/ios/Pods/Headers/Public/React-RCTAppDelegate\"\ \"/Users/osmanoruc/Desktop/ExpoTvos/ios/Pods/Headers/Public/React-RCTBlob\"\ \"/Users/osmanoruc/Desktop/ExpoTvos/ios/Pods/Headers/Public/React-RCTText\"\ \"/Users/osmanoruc/Desktop/ExpoTvos/ios/Pods/Headers/Public/React-callinvoker\"\ \"/Users/osmanoruc/Desktop/ExpoTvos/ios/Pods/Headers/Public/React-cxxreact\"\ \"/Users/osmanoruc/Desktop/ExpoTvos/ios/Pods/Headers/Public/React-debug\"\ \"/Users/osmanoruc/Desktop/ExpoTvos/ios/Pods/Headers/Public/React-hermes\"\ \"/Users/osmanoruc/Desktop/ExpoTvos/ios/Pods/Headers/Public/React-jsi\"\ \"/Users/osmanoruc/Desktop/ExpoTvos/ios/Pods/Headers/Public/React-jsiexecutor\"\ \"/Users/osmanoruc/Desktop/ExpoTvos/ios/Pods/Headers/Public/React-jsinspector\"\ \"/Users/osmanoruc/Desktop/ExpoTvos/ios/Pods/Headers/Public/React-logger\"\ \"/Users/osmanoruc/Desktop/ExpoTvos/ios/Pods/Headers/Public/React-perflogger\"\ \"/Users/osmanoruc/Desktop/ExpoTvos/ios/Pods/Headers/Public/React-runtimeexecutor\"\ \"/Users/osmanoruc/Desktop/ExpoTvos/ios/Pods/Headers/Public/React-runtimescheduler\"\ \"/Users/osmanoruc/Desktop/ExpoTvos/ios/Pods/Headers/Public/React-utils\"\ \"/Users/osmanoruc/Desktop/ExpoTvos/ios/Pods/Headers/Public/ReactCommon\"\ \"/Users/osmanoruc/Desktop/ExpoTvos/ios/Pods/Headers/Public/SocketRocket\"\ \"/Users/osmanoruc/Desktop/ExpoTvos/ios/Pods/Headers/Public/Yoga\"\ \"/Users/osmanoruc/Desktop/ExpoTvos/ios/Pods/Headers/Public/fmt\"\ \"/Users/osmanoruc/Desktop/ExpoTvos/ios/Pods/Headers/Public/glog\"\ \"/Users/osmanoruc/Desktop/ExpoTvos/ios/Pods/Headers/Public/hermes-engine\"\ \"/Users/osmanoruc/Desktop/ExpoTvos/ios/Pods/Headers/Public/libevent\"\ \"/Users/osmanoruc/Desktop/ExpoTvos/ios/Pods/Headers/Public/react-native-safe-area-context\"\ \"/Users/osmanoruc/Desktop/ExpoTvos/ios/Pods/Headers/Public/react-native-video\"\ \"/Users/osmanoruc/Desktop/ExpoTvos/ios/Pods/DoubleConversion\"\ \"/Users/osmanoruc/Desktop/ExpoTvos/ios/Pods/boost\"\ \"/Users/osmanoruc/Desktop/ExpoTvos/ios/Pods/boost\"\ \"/Users/osmanoruc/Desktop/ExpoTvos/ios/Pods/boost-for-react-native\"\ \"/Users/osmanoruc/Desktop/ExpoTvos/ios/Pods/glog\"\ \"/Users/osmanoruc/Desktop/ExpoTvos/ios/Pods/RCT-Folly\"\ \"/Users/osmanoruc/Desktop/ExpoTvos/ios/Pods/Headers/Public/React-hermes\"\ \"/Users/osmanoruc/Desktop/ExpoTvos/ios/Pods/Headers/Public/hermes-engine\"\ \"/Users/osmanoruc/Desktop/ExpoTvos/ios/Pods/../../node_modules/react-native/ReactCommon\"\ \"/Users/osmanoruc/Desktop/ExpoTvos/ios/Pods/Headers/Private/React-Core\"\ \"/include/\"
     export HIDE_BITCODE_SYMBOLS\=YES
     export HOME\=/Users/osmanoruc
+    export HOST_ARCH\=arm64
     export HOST_PLATFORM\=macosx
     export ICONV\=/usr/bin/iconv
+    export INFOPLIST_ENABLE_CFBUNDLEICONS_MERGE\=YES
     export INFOPLIST_EXPAND_BUILD_SETTINGS\=YES
     export INFOPLIST_FILE\=ExpoTvos-tvOS/Info.plist
     export INFOPLIST_OUTPUT_FORMAT\=binary
@@ -262,6 +602,7 @@ PhaseScriptExecution Bundle\ React\ Native\ Code\ And\ Images /Users/osmanoruc/L
     export INSTALL_OWNER\=osmanoruc
     export INSTALL_PATH\=/Applications
     export INSTALL_ROOT\=/tmp/ExpoTvos.dst
+    export IS_UNOPTIMIZED_BUILD\=YES
     export JAVAC_DEFAULT_FLAGS\=-J-Xms64m\ -J-XX:NewSize\=4M\ -J-Dfile.encoding\=UTF8
     export JAVA_APP_STUB\=/System/Library/Frameworks/JavaVM.framework/Resources/MacOS/JavaApplicationStub
     export JAVA_ARCHIVE_CLASSES\=YES
@@ -278,6 +619,7 @@ PhaseScriptExecution Bundle\ React\ Native\ Code\ And\ Images /Users/osmanoruc/L
     export LD_DEPENDENCY_INFO_FILE\=/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Intermediates.noindex/ExpoTvos.build/Debug-appletvsimulator/ExpoTvos-tvOS.build/Objects-normal/undefined_arch/ExpoTvos-tvOS_dependency_info.dat
     export LD_ENTITLEMENTS_SECTION\=/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Intermediates.noindex/ExpoTvos.build/Debug-appletvsimulator/ExpoTvos-tvOS.build/ExpoTvos-tvOS.app-Simulated.xcent
     export LD_ENTITLEMENTS_SECTION_DER\=/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Intermediates.noindex/ExpoTvos.build/Debug-appletvsimulator/ExpoTvos-tvOS.build/ExpoTvos-tvOS.app-Simulated.xcent.der
+    export LD_EXPORT_SYMBOLS\=YES
     export LD_GENERATE_MAP_FILE\=NO
     export LD_MAP_FILE_PATH\=/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Intermediates.noindex/ExpoTvos.build/Debug-appletvsimulator/ExpoTvos-tvOS.build/ExpoTvos-tvOS-LinkMap-normal-undefined_arch.txt
     export LD_NO_PIE\=NO
@@ -290,7 +632,7 @@ PhaseScriptExecution Bundle\ React\ Native\ Code\ And\ Images /Users/osmanoruc/L
     export LIBRARY_FLAG_NOSPACE\=YES
     export LIBRARY_FLAG_PREFIX\=-l
     export LIBRARY_KEXT_INSTALL_PATH\=/Library/Extensions
-    export LIBRARY_SEARCH_PATHS\=/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Products/Debug-appletvsimulator\ /Applications/Xcode.app/Contents/Developer/Platforms/AppleTVSimulator.platform/Developer/SDKs/AppleTVSimulator16.4.sdk/usr/lib/swift\ \"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/appletvsimulator\"\ \"\"\ \"/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Products/Debug-appletvsimulator/BVLinearGradient-tvOS\"\ \"/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Products/Debug-appletvsimulator/DoubleConversion-tvOS\"\ \"/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Products/Debug-appletvsimulator/RCT-Folly-tvOS\"\ \"/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Products/Debug-appletvsimulator/RCTTypeSafety-tvOS\"\ \"/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Products/Debug-appletvsimulator/RNReanimated-tvOS\"\ \"/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Products/Debug-appletvsimulator/RNScreens-tvOS\"\ \"/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Products/Debug-appletvsimulator/React-Codegen-tvOS\"\ \"/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Products/Debug-appletvsimulator/React-Core-tvOS\"\ \"/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Products/Debug-appletvsimulator/React-CoreModules-tvOS\"\ \"/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Products/Debug-appletvsimulator/React-NativeModulesApple-tvOS\"\ \"/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Products/Debug-appletvsimulator/React-RCTAnimation-tvOS\"\ \"/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Products/Debug-appletvsimulator/React-RCTAppDelegate-tvOS\"\ \"/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Products/Debug-appletvsimulator/React-RCTBlob-tvOS\"\ \"/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Products/Debug-appletvsimulator/React-RCTImage-tvOS\"\ \"/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Products/Debug-appletvsimulator/React-RCTLinking-tvOS\"\ \"/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Products/Debug-appletvsimulator/React-RCTNetwork-tvOS\"\ \"/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Products/Debug-appletvsimulator/React-RCTSettings-tvOS\"\ \"/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Products/Debug-appletvsimulator/React-RCTText-tvOS\"\ \"/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Products/Debug-appletvsimulator/React-cxxreact-tvOS\"\ \"/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Products/Debug-appletvsimulator/React-debug-tvOS\"\ \"/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Products/Debug-appletvsimulator/React-hermes-tvOS\"\ \"/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Products/Debug-appletvsimulator/React-jsi-tvOS\"\ \"/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Products/Debug-appletvsimulator/React-jsiexecutor-tvOS\"\ \"/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Products/Debug-appletvsimulator/React-jsinspector-tvOS\"\ \"/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Products/Debug-appletvsimulator/React-logger-tvOS\"\ \"/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Products/Debug-appletvsimulator/React-perflogger-tvOS\"\ \"/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Products/Debug-appletvsimulator/React-runtimescheduler-tvOS\"\ \"/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Products/Debug-appletvsimulator/React-utils-tvOS\"\ \"/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Products/Debug-appletvsimulator/ReactCommon-tvOS\"\ \"/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Products/Debug-appletvsimulator/SocketRocket-tvOS\"\ \"/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Products/Debug-appletvsimulator/Yoga-tvOS\"\ \"/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Products/Debug-appletvsimulator/fmt-tvOS\"\ \"/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Products/Debug-appletvsimulator/glog-tvOS\"\ \"/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Products/Debug-appletvsimulator/libevent-tvOS\"\ \"/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Products/Debug-appletvsimulator/react-native-safe-area-context-tvOS\"\ \"/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Products/Debug-appletvsimulator/react-native-video-tvOS\"
+    export LIBRARY_SEARCH_PATHS\=/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Products/Debug-appletvsimulator\ /Applications/Xcode.app/Contents/Developer/Platforms/AppleTVSimulator.platform/Developer/SDKs/AppleTVSimulator17.0.sdk/usr/lib/swift\ \"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/appletvsimulator\"\ \"\"\ \"/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Products/Debug-appletvsimulator/BVLinearGradient-tvOS\"\ \"/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Products/Debug-appletvsimulator/DoubleConversion-tvOS\"\ \"/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Products/Debug-appletvsimulator/RCT-Folly-tvOS\"\ \"/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Products/Debug-appletvsimulator/RCTTypeSafety-tvOS\"\ \"/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Products/Debug-appletvsimulator/RNReanimated-tvOS\"\ \"/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Products/Debug-appletvsimulator/RNScreens-tvOS\"\ \"/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Products/Debug-appletvsimulator/React-Codegen-tvOS\"\ \"/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Products/Debug-appletvsimulator/React-Core-tvOS\"\ \"/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Products/Debug-appletvsimulator/React-CoreModules-tvOS\"\ \"/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Products/Debug-appletvsimulator/React-NativeModulesApple-tvOS\"\ \"/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Products/Debug-appletvsimulator/React-RCTAnimation-tvOS\"\ \"/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Products/Debug-appletvsimulator/React-RCTAppDelegate-tvOS\"\ \"/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Products/Debug-appletvsimulator/React-RCTBlob-tvOS\"\ \"/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Products/Debug-appletvsimulator/React-RCTImage-tvOS\"\ \"/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Products/Debug-appletvsimulator/React-RCTLinking-tvOS\"\ \"/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Products/Debug-appletvsimulator/React-RCTNetwork-tvOS\"\ \"/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Products/Debug-appletvsimulator/React-RCTSettings-tvOS\"\ \"/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Products/Debug-appletvsimulator/React-RCTText-tvOS\"\ \"/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Products/Debug-appletvsimulator/React-cxxreact-tvOS\"\ \"/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Products/Debug-appletvsimulator/React-debug-tvOS\"\ \"/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Products/Debug-appletvsimulator/React-hermes-tvOS\"\ \"/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Products/Debug-appletvsimulator/React-jsi-tvOS\"\ \"/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Products/Debug-appletvsimulator/React-jsiexecutor-tvOS\"\ \"/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Products/Debug-appletvsimulator/React-jsinspector-tvOS\"\ \"/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Products/Debug-appletvsimulator/React-logger-tvOS\"\ \"/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Products/Debug-appletvsimulator/React-perflogger-tvOS\"\ \"/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Products/Debug-appletvsimulator/React-runtimescheduler-tvOS\"\ \"/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Products/Debug-appletvsimulator/React-utils-tvOS\"\ \"/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Products/Debug-appletvsimulator/ReactCommon-tvOS\"\ \"/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Products/Debug-appletvsimulator/SocketRocket-tvOS\"\ \"/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Products/Debug-appletvsimulator/Yoga-tvOS\"\ \"/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Products/Debug-appletvsimulator/fmt-tvOS\"\ \"/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Products/Debug-appletvsimulator/glog-tvOS\"\ \"/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Products/Debug-appletvsimulator/libevent-tvOS\"\ \"/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Products/Debug-appletvsimulator/react-native-safe-area-context-tvOS\"\ \"/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Products/Debug-appletvsimulator/react-native-video-tvOS\"
     export LINKER_DISPLAYS_MANGLED_NAMES\=NO
     export LINK_FILE_LIST_normal_arm64\=/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Intermediates.noindex/ExpoTvos.build/Debug-appletvsimulator/ExpoTvos-tvOS.build/Objects-normal/arm64/ExpoTvos-tvOS.LinkFileList
     export LINK_OBJC_RUNTIME\=YES
@@ -299,6 +641,7 @@ PhaseScriptExecution Bundle\ React\ Native\ Code\ And\ Images /Users/osmanoruc/L
     export LLVM_TARGET_TRIPLE_SUFFIX\=-simulator
     export LLVM_TARGET_TRIPLE_VENDOR\=apple
     export LOCALIZATION_EXPORT_SUPPORTED\=YES
+    export LOCALIZATION_PREFERS_STRING_CATALOGS\=NO
     export LOCALIZED_RESOURCES_FOLDER_PATH\=ExpoTvos-tvOS.app/en.lproj
     export LOCALIZED_STRING_MACRO_NAMES\=NSLocalizedString\ CFCopyLocalizedString
     export LOCALIZED_STRING_SWIFTUI_SUPPORT\=YES
@@ -309,11 +652,15 @@ PhaseScriptExecution Bundle\ React\ Native\ Code\ And\ Images /Users/osmanoruc/L
     export LOCROOT\=/Users/osmanoruc/Desktop/ExpoTvos/ios
     export LOCSYMROOT\=/Users/osmanoruc/Desktop/ExpoTvos/ios
     export MACH_O_TYPE\=mh_execute
-    export MAC_OS_X_PRODUCT_BUILD_VERSION\=22G74
-    export MAC_OS_X_VERSION_ACTUAL\=130500
-    export MAC_OS_X_VERSION_MAJOR\=130000
-    export MAC_OS_X_VERSION_MINOR\=130500
+    export MAC_OS_X_PRODUCT_BUILD_VERSION\=23A344
+    export MAC_OS_X_VERSION_ACTUAL\=140000
+    export MAC_OS_X_VERSION_MAJOR\=140000
+    export MAC_OS_X_VERSION_MINOR\=140000
+    export MAKE_MERGEABLE\=NO
     export MARKETING_VERSION\=1.0
+    export MERGEABLE_LIBRARY\=NO
+    export MERGED_BINARY_TYPE\=none
+    export MERGE_LINKED_LIBRARIES\=NO
     export METAL_LIBRARY_FILE_BASE\=default
     export METAL_LIBRARY_OUTPUT_DIR\=/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Products/Debug-appletvsimulator/ExpoTvos-tvOS.app
     export MODULES_FOLDER_PATH\=ExpoTvos-tvOS.app/Modules
@@ -337,7 +684,7 @@ PhaseScriptExecution Bundle\ React\ Native\ Code\ And\ Images /Users/osmanoruc/L
     export OTHER_SWIFT_FLAGS\=\ -D\ COCOAPODS\ -Xcc\ -fmodule-map-file\=\"/Users/osmanoruc/Desktop/ExpoTvos/ios/Pods/Headers/Public/RCTTypeSafety/RCTTypeSafety-tvOS.modulemap\"\ -Xcc\ -fmodule-map-file\=\"/Users/osmanoruc/Desktop/ExpoTvos/ios/Pods/Headers/Public/React/React-Core-tvOS.modulemap\"\ -Xcc\ -fmodule-map-file\=\"/Users/osmanoruc/Desktop/ExpoTvos/ios/Pods/Headers/Public/ReactCommon/ReactCommon-tvOS.modulemap\"\ -Xcc\ -fmodule-map-file\=\"/Users/osmanoruc/Desktop/ExpoTvos/ios/Pods/Headers/Public/React_Codegen/React-Codegen-tvOS.modulemap\"\ -Xcc\ -fmodule-map-file\=\"/Users/osmanoruc/Desktop/ExpoTvos/ios/Pods/Headers/Public/React_NativeModulesApple/React-NativeModulesApple-tvOS.modulemap\"\ -Xcc\ -fmodule-map-file\=\"/Users/osmanoruc/Desktop/ExpoTvos/ios/Pods/Headers/Public/folly/RCT-Folly-tvOS.modulemap\"\ -Xcc\ -fmodule-map-file\=\"/Users/osmanoruc/Desktop/ExpoTvos/ios/Pods/Headers/Public/yoga/Yoga-tvOS.modulemap\"
     export PACKAGE_TYPE\=com.apple.package-type.wrapper.application
     export PASCAL_STRINGS\=YES
-    export PATH\=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin:/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/appleinternal/bin:/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/local/bin:/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/libexec:/Applications/Xcode.app/Contents/Developer/Platforms/AppleTVSimulator.platform/usr/bin:/Applications/Xcode.app/Contents/Developer/Platforms/AppleTVSimulator.platform/usr/appleinternal/bin:/Applications/Xcode.app/Contents/Developer/Platforms/AppleTVSimulator.platform/usr/local/bin:/Applications/Xcode.app/Contents/Developer/Platforms/AppleTVSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/Platforms/AppleTVSimulator.platform/Developer/usr/local/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/local/bin:/var/folders/gb/dx6y1bnd29g1g_h1kfrt4wtw0000gn/T/yarn--1695811767002-0.6129262315103157:/Users/osmanoruc/Desktop/ExpoTvos/node_modules/.bin:/Users/osmanoruc/.config/yarn/link/node_modules/.bin:/Users/osmanoruc/.yarn/bin:/Users/osmanoruc/.nvm/versions/node/v19.9.0/libexec/lib/node_modules/npm/bin/node-gyp-bin:/Users/osmanoruc/.nvm/versions/node/v19.9.0/lib/node_modules/npm/bin/node-gyp-bin:/Users/osmanoruc/.nvm/versions/node/v19.9.0/bin/node_modules/npm/bin/node-gyp-bin:/Users/osmanoruc/Library/Android/sdk/platform-tools:/Users/osmanoruc/.nvm/versions/node/v19.9.0/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin
+    export PATH\=/Applications/Xcode.app/Contents/Developer/Library/Xcode/Plug-ins/XCBSpecifications.ideplugin/Contents/Resources:/Applications/Xcode.app/Contents/Developer/Library/Xcode/Plug-ins/XCBSpecifications.ideplugin:/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin:/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/appleinternal/bin:/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/local/bin:/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/libexec:/Applications/Xcode.app/Contents/Developer/Platforms/AppleTVSimulator.platform/usr/bin:/Applications/Xcode.app/Contents/Developer/Platforms/AppleTVSimulator.platform/usr/appleinternal/bin:/Applications/Xcode.app/Contents/Developer/Platforms/AppleTVSimulator.platform/usr/local/bin:/Applications/Xcode.app/Contents/Developer/Platforms/AppleTVSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/Platforms/AppleTVSimulator.platform/Developer/usr/local/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/local/bin:/var/folders/gb/dx6y1bnd29g1g_h1kfrt4wtw0000gn/T/yarn--1696244106382-0.4832595366632262:/Users/osmanoruc/Desktop/ExpoTvos/node_modules/.bin:/Users/osmanoruc/.config/yarn/link/node_modules/.bin:/Users/osmanoruc/.yarn/bin:/Users/osmanoruc/.nvm/versions/node/v19.9.0/libexec/lib/node_modules/npm/bin/node-gyp-bin:/Users/osmanoruc/.nvm/versions/node/v19.9.0/lib/node_modules/npm/bin/node-gyp-bin:/Users/osmanoruc/.nvm/versions/node/v19.9.0/bin/node_modules/npm/bin/node-gyp-bin:/Users/osmanoruc/Library/Android/sdk/platform-tools:/Users/osmanoruc/.nvm/versions/node/v19.9.0/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Library/Apple/usr/bin
     export PATH_PREFIXES_EXCLUDED_FROM_HEADER_DEPENDENCIES\=/usr/include\ /usr/local/include\ /System/Library/Frameworks\ /System/Library/PrivateFrameworks\ /Applications/Xcode.app/Contents/Developer/Headers\ /Applications/Xcode.app/Contents/Developer/SDKs\ /Applications/Xcode.app/Contents/Developer/Platforms
     export PBDEVELOPMENTPLIST_PATH\=ExpoTvos-tvOS.app/pbdevelopment.plist
     export PER_ARCH_OBJECT_FILE_DIR\=/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Intermediates.noindex/ExpoTvos.build/Debug-appletvsimulator/ExpoTvos-tvOS.build/Objects-normal/undefined_arch
@@ -355,7 +702,7 @@ PhaseScriptExecution Bundle\ React\ Native\ Code\ And\ Images /Users/osmanoruc/L
     export PLATFORM_FAMILY_NAME\=tvOS
     export PLATFORM_NAME\=appletvsimulator
     export PLATFORM_PREFERRED_ARCH\=x86_64
-    export PLATFORM_PRODUCT_BUILD_VERSION\=20L489
+    export PLATFORM_PRODUCT_BUILD_VERSION\=21J351
     export PLIST_FILE_OUTPUT_FORMAT\=binary
     export PLUGINS_FOLDER_PATH\=ExpoTvos-tvOS.app/PlugIns
     export PODS_BUILD_DIR\=/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Products
@@ -392,6 +739,7 @@ PhaseScriptExecution Bundle\ React\ Native\ Code\ And\ Images /Users/osmanoruc/L
     export REMOVE_GIT_FROM_RESOURCES\=YES
     export REMOVE_HEADERS_FROM_EMBEDDED_BUNDLES\=YES
     export REMOVE_HG_FROM_RESOURCES\=YES
+    export REMOVE_STATIC_EXECUTABLES_FROM_EMBEDDED_BUNDLES\=YES
     export REMOVE_SVN_FROM_RESOURCES\=YES
     export REZ_COLLECTOR_DIR\=/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Intermediates.noindex/ExpoTvos.build/Debug-appletvsimulator/ExpoTvos-tvOS.build/ResourceManagerResources
     export REZ_OBJECTS_DIR\=/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Intermediates.noindex/ExpoTvos.build/Debug-appletvsimulator/ExpoTvos-tvOS.build/ResourceManagerResources/Objects
@@ -402,20 +750,20 @@ PhaseScriptExecution Bundle\ React\ Native\ Code\ And\ Images /Users/osmanoruc/L
     export SCRIPT_INPUT_FILE_LIST_COUNT\=0
     export SCRIPT_OUTPUT_FILE_COUNT\=0
     export SCRIPT_OUTPUT_FILE_LIST_COUNT\=0
-    export SDKROOT\=/Applications/Xcode.app/Contents/Developer/Platforms/AppleTVSimulator.platform/Developer/SDKs/AppleTVSimulator16.4.sdk
-    export SDK_DIR\=/Applications/Xcode.app/Contents/Developer/Platforms/AppleTVSimulator.platform/Developer/SDKs/AppleTVSimulator16.4.sdk
-    export SDK_DIR_appletvsimulator\=/Applications/Xcode.app/Contents/Developer/Platforms/AppleTVSimulator.platform/Developer/SDKs/AppleTVSimulator16.4.sdk
-    export SDK_DIR_appletvsimulator16_4\=/Applications/Xcode.app/Contents/Developer/Platforms/AppleTVSimulator.platform/Developer/SDKs/AppleTVSimulator16.4.sdk
-    export SDK_NAME\=appletvsimulator16.4
-    export SDK_NAMES\=appletvsimulator16.4
-    export SDK_PRODUCT_BUILD_VERSION\=20L489
+    export SDKROOT\=/Applications/Xcode.app/Contents/Developer/Platforms/AppleTVSimulator.platform/Developer/SDKs/AppleTVSimulator17.0.sdk
+    export SDK_DIR\=/Applications/Xcode.app/Contents/Developer/Platforms/AppleTVSimulator.platform/Developer/SDKs/AppleTVSimulator17.0.sdk
+    export SDK_DIR_appletvsimulator\=/Applications/Xcode.app/Contents/Developer/Platforms/AppleTVSimulator.platform/Developer/SDKs/AppleTVSimulator17.0.sdk
+    export SDK_DIR_appletvsimulator17_0\=/Applications/Xcode.app/Contents/Developer/Platforms/AppleTVSimulator.platform/Developer/SDKs/AppleTVSimulator17.0.sdk
+    export SDK_NAME\=appletvsimulator17.0
+    export SDK_NAMES\=appletvsimulator17.0
+    export SDK_PRODUCT_BUILD_VERSION\=21J351
     export SDK_STAT_CACHE_DIR\=/Users/osmanoruc/Library/Developer/Xcode/DerivedData
     export SDK_STAT_CACHE_ENABLE\=YES
-    export SDK_STAT_CACHE_PATH\=/Users/osmanoruc/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/appletvsimulator16.4-20L489-.sdkstatcache
-    export SDK_VERSION\=16.4
-    export SDK_VERSION_ACTUAL\=160400
-    export SDK_VERSION_MAJOR\=160000
-    export SDK_VERSION_MINOR\=160400
+    export SDK_STAT_CACHE_PATH\=/Users/osmanoruc/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/appletvsimulator17.0-21J351-25a0e40260bb3038152d97ad1df42a55.sdkstatcache
+    export SDK_VERSION\=17.0
+    export SDK_VERSION_ACTUAL\=170000
+    export SDK_VERSION_MAJOR\=170000
+    export SDK_VERSION_MINOR\=170000
     export SED\=/usr/bin/sed
     export SEPARATE_STRIP\=NO
     export SEPARATE_SYMBOL_EDIT\=NO
@@ -480,7 +828,8 @@ PhaseScriptExecution Bundle\ React\ Native\ Code\ And\ Images /Users/osmanoruc/L
     export TAPI_ENABLE_PROJECT_HEADERS\=NO
     export TAPI_LANGUAGE\=objective-c
     export TAPI_LANGUAGE_STANDARD\=compiler-default
-    export TAPI_VERIFY_MODE\=ErrorsOnly
+    export TAPI_USE_SRCROOT\=YES
+    export TAPI_VERIFY_MODE\=Pedantic
     export TARGETED_DEVICE_FAMILY\=3
     export TARGETNAME\=ExpoTvos-tvOS
     export TARGET_BUILD_DIR\=/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Products/Debug-appletvsimulator
@@ -494,7 +843,7 @@ PhaseScriptExecution Bundle\ React\ Native\ Code\ And\ Images /Users/osmanoruc/L
     export TEMP_FILES_DIR\=/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Intermediates.noindex/ExpoTvos.build/Debug-appletvsimulator/ExpoTvos-tvOS.build
     export TEMP_FILE_DIR\=/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Intermediates.noindex/ExpoTvos.build/Debug-appletvsimulator/ExpoTvos-tvOS.build
     export TEMP_ROOT\=/Users/osmanoruc/Library/Developer/Xcode/DerivedData/ExpoTvos-hgdmvwyfrzcoybeeatndrfoblhir/Build/Intermediates.noindex
-    export TEST_FRAMEWORK_SEARCH_PATHS\=\ /Applications/Xcode.app/Contents/Developer/Platforms/AppleTVSimulator.platform/Developer/Library/Frameworks\ /Applications/Xcode.app/Contents/Developer/Platforms/AppleTVSimulator.platform/Developer/SDKs/AppleTVSimulator16.4.sdk/Developer/Library/Frameworks
+    export TEST_FRAMEWORK_SEARCH_PATHS\=\ /Applications/Xcode.app/Contents/Developer/Platforms/AppleTVSimulator.platform/Developer/Library/Frameworks\ /Applications/Xcode.app/Contents/Developer/Platforms/AppleTVSimulator.platform/Developer/SDKs/AppleTVSimulator17.0.sdk/Developer/Library/Frameworks
     export TEST_LIBRARY_SEARCH_PATHS\=\ /Applications/Xcode.app/Contents/Developer/Platforms/AppleTVSimulator.platform/Developer/usr/lib
     export TOOLCHAINS\=com.apple.dt.toolchain.XcodeDefault
     export TOOLCHAIN_DIR\=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain
@@ -527,10 +876,10 @@ PhaseScriptExecution Bundle\ React\ Native\ Code\ And\ Images /Users/osmanoruc/L
     export WRAPPER_SUFFIX\=.app
     export WRAP_ASSET_PACKS_IN_SEPARATE_DIRECTORIES\=NO
     export XCODE_APP_SUPPORT_DIR\=/Applications/Xcode.app/Contents/Developer/Library/Xcode
-    export XCODE_PRODUCT_BUILD_VERSION\=14E222b
-    export XCODE_VERSION_ACTUAL\=1430
-    export XCODE_VERSION_MAJOR\=1400
-    export XCODE_VERSION_MINOR\=1430
+    export XCODE_PRODUCT_BUILD_VERSION\=15A240d
+    export XCODE_VERSION_ACTUAL\=1500
+    export XCODE_VERSION_MAJOR\=1500
+    export XCODE_VERSION_MINOR\=1500
     export XPCSERVICES_FOLDER_PATH\=ExpoTvos-tvOS.app/XPCServices
     export YACC\=yacc
     export _WRAPPER_CONTENTS_DIR_SHALLOW_BUNDLE_NO\=/Contents
@@ -555,9 +904,12 @@ PhaseScriptExecution Bundle\ React\ Native\ Code\ And\ Images /Users/osmanoruc/L
 Skipping bundling in Debug for the Simulator (since the packager bundles for you). Use the FORCE_BUNDLING flag to change this behavior.
 + exit 0
 
-/Users/osmanoruc/Desktop/ExpoTvos/ios/Pods/Pods.xcodeproj: warning: The tvOS Simulator deployment target 'TVOS_DEPLOYMENT_TARGET' is set to 9.0, but the range of supported deployment target versions is 11.0 to 16.4.99. (in target 'BVLinearGradient-tvOS' from project 'Pods')
-/Users/osmanoruc/Desktop/ExpoTvos/ios/Pods/Pods.xcodeproj: warning: The tvOS Simulator deployment target 'TVOS_DEPLOYMENT_TARGET' is set to 9.0, but the range of supported deployment target versions is 11.0 to 16.4.99. (in target 'react-native-video-tvOS' from project 'Pods')
-/Users/osmanoruc/Desktop/ExpoTvos/ios/Pods/Pods.xcodeproj: warning: The tvOS Simulator deployment target 'TVOS_DEPLOYMENT_TARGET' is set to 10.0, but the range of supported deployment target versions is 11.0 to 16.4.99. (in target 'libevent-tvOS' from project 'Pods')
-/Users/osmanoruc/Desktop/ExpoTvos/ios/Pods/Pods.xcodeproj: warning: The tvOS Simulator deployment target 'TVOS_DEPLOYMENT_TARGET' is set to 9.0, but the range of supported deployment target versions is 11.0 to 16.4.99. (in target 'RNReanimated-tvOS' from project 'Pods')
+/Users/osmanoruc/Desktop/ExpoTvos/ios/Pods/Pods.xcodeproj: warning: The tvOS Simulator deployment target 'TVOS_DEPLOYMENT_TARGET' is set to 10.0, but the range of supported deployment target versions is 12.0 to 17.0.99. (in target 'libevent-tvOS' from project 'Pods')
+/Users/osmanoruc/Desktop/ExpoTvos/ios/Pods/Pods.xcodeproj: warning: The tvOS Simulator deployment target 'TVOS_DEPLOYMENT_TARGET' is set to 9.0, but the range of supported deployment target versions is 12.0 to 17.0.99. (in target 'RNReanimated-tvOS' from project 'Pods')
+/Users/osmanoruc/Desktop/ExpoTvos/ios/Pods/Pods.xcodeproj: warning: The tvOS Simulator deployment target 'TVOS_DEPLOYMENT_TARGET' is set to 11.0, but the range of supported deployment target versions is 12.0 to 17.0.99. (in target 'fmt-tvOS' from project 'Pods')
+/Users/osmanoruc/Desktop/ExpoTvos/ios/Pods/Pods.xcodeproj: warning: The tvOS Simulator deployment target 'TVOS_DEPLOYMENT_TARGET' is set to 9.0, but the range of supported deployment target versions is 12.0 to 17.0.99. (in target 'BVLinearGradient-tvOS' from project 'Pods')
+/Users/osmanoruc/Desktop/ExpoTvos/ios/Pods/Pods.xcodeproj: warning: The tvOS Simulator deployment target 'TVOS_DEPLOYMENT_TARGET' is set to 11.0, but the range of supported deployment target versions is 12.0 to 17.0.99. (in target 'RNScreens-tvOS' from project 'Pods')
+/Users/osmanoruc/Desktop/ExpoTvos/ios/Pods/Pods.xcodeproj: warning: The tvOS Simulator deployment target 'TVOS_DEPLOYMENT_TARGET' is set to 9.0, but the range of supported deployment target versions is 12.0 to 17.0.99. (in target 'react-native-video-tvOS' from project 'Pods')
+/Users/osmanoruc/Desktop/ExpoTvos/ios/Pods/Pods.xcodeproj: warning: The tvOS Simulator deployment target 'TVOS_DEPLOYMENT_TARGET' is set to 11.0, but the range of supported deployment target versions is 12.0 to 17.0.99. (in target 'SocketRocket-tvOS' from project 'Pods')
 ** BUILD SUCCEEDED **
 

@@ -1,7 +1,7 @@
 import { RefObject } from 'react';
 import { AbstractKeys, getFocusableComponents } from '../FocusHelper';
 import { useFocusable } from '@noriginmedia/norigin-spatial-navigation';
-import { FlatList, useWindowDimensions } from 'react-native';
+import { FlatList, Platform, useWindowDimensions } from 'react-native';
 import { Extrapolate, SharedValue, interpolate } from 'react-native-reanimated';
 import { useApp } from '../context';
 import { GetScaledValue } from '../methods';
@@ -26,7 +26,7 @@ const useFocusHandler = () => {
 
 		if (focusableItems.includes(nextFocusKeys[nextFocus])) {
 			// pushToNavigationStack(nextFocusKeys[nextFocus]);
-			setFocus(nextFocusKeys[nextFocus]);
+			Platform.OS !== 'web' && setFocus(nextFocusKeys[nextFocus]);
 			return nextFocusKeys[nextFocus];
 		}
 	};
@@ -105,15 +105,17 @@ const useFocusHandler = () => {
 
 				const _vOffset =
 					width - (GetScaledValue(230) + (viewableItem - 1) * itemWidth);
+				const _pOffset =
+					Platform.OS === 'web' ? _vOffset - GetScaledValue(200) : _vOffset;
 
 				if (currentFocus.itemIndex === sectionLength - viewableItem) {
 					border.value =
-						_vOffset < GetScaledValue(200) ? GetScaledValue(200) : _vOffset;
+						_vOffset < GetScaledValue(200) ? GetScaledValue(200) : _pOffset;
 				} else if (
 					currentFocus.itemIndex - 1 ===
 					sectionLength - viewableItem
 				) {
-					border.value = itemWidth + _vOffset;
+					border.value = itemWidth + _pOffset;
 				} else if (currentFocus.itemIndex > sectionLength - viewableItem) {
 					border.value += itemWidth;
 				}

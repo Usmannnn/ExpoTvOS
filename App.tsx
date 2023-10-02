@@ -5,14 +5,15 @@ import RootNavigationContainer from './src/navigations';
 import { init, useFocusable } from '@noriginmedia/norigin-spatial-navigation';
 import {
 	Platform,
+	Pressable,
 	Text,
-	TouchableOpacity,
 	View,
 	useTVEventHandler,
 } from 'react-native';
 import { pressedKeyEventHandler } from './src/FocusHelper';
 
 init();
+
 const App = () => {
 	const { setFocus } = useFocusable();
 
@@ -28,9 +29,9 @@ const App = () => {
 	}, []);
 
 	return (
-		<View style={{ flex: 1 }}>
+		<View style={{ flex: 1, overflow: 'hidden' }}>
 			<GlobalContextProvider>
-				<TouchableOpacity
+				<Pressable
 					hasTVPreferredFocus={true}
 					onPress={() => null}
 					style={{ position: 'absolute', zIndex: -1 }}>
@@ -38,7 +39,7 @@ const App = () => {
 						This touchable opacity and text is required to catch keys of remote
 						controller for android tv (This text is not visible)
 					</Text>
-				</TouchableOpacity>
+				</Pressable>
 				<RootNavigationContainer />
 			</GlobalContextProvider>
 		</View>

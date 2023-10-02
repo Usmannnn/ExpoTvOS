@@ -36,36 +36,42 @@ const Sidebar = () => {
 	}, [hasFocusedChild]);
 
 	return (
-		<Animated.View style={[styles.container, animatedOpacity]}>
-			<FocusContext.Provider value={focusKey}>
-				<View ref={ref}>
-					<FocusableTopSection
-						hasFocusedChild={hasFocusedChild}
-						focusKey="profile"
-						onArrowPress={onArrowPress}
-					/>
+		<>
+			<Animated.View style={[styles.container, animatedOpacity]}>
+				<FocusContext.Provider value={focusKey}>
+					<View ref={ref}>
+						<FocusableTopSection
+							hasFocusedChild={hasFocusedChild}
+							focusKey="profile"
+							onArrowPress={onArrowPress}
+						/>
 
-					<View
-						style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-						{[
-							...new Array(10)
-								.fill(0)
-								.map((_, index) => (
-									<FocusableSidebarItem
-										key={index}
-										focusKey={`icon${index}`}
-										rightFocusKey={'section0_item0'}
-										downFocusKey={`icon${index + 1}`}
-										upFocusKey={index === 0 ? 'profile' : `icon${index - 1}`}
-										onArrowPress={onArrowPress}
-									/>
-								)),
-						]}
+						<View
+							style={{
+								flex: 1,
+								justifyContent: 'center',
+								alignItems: 'center',
+							}}>
+							{[
+								...new Array(10)
+									.fill(0)
+									.map((_, index) => (
+										<FocusableSidebarItem
+											key={index}
+											focusKey={`icon${index}`}
+											rightFocusKey={'section0_item0'}
+											downFocusKey={`icon${index + 1}`}
+											upFocusKey={index === 0 ? 'profile' : `icon${index - 1}`}
+											onArrowPress={onArrowPress}
+										/>
+									)),
+							]}
+						</View>
 					</View>
-				</View>
-			</FocusContext.Provider>
+				</FocusContext.Provider>
+			</Animated.View>
 			{hasFocusedChild && <SidebarOverlay />}
-		</Animated.View>
+		</>
 	);
 };
 
@@ -153,8 +159,8 @@ export const FocusableTopSection = ({
 						exiting={FadeOut.duration(1000)}
 						source={require('../../assets/tod-logo.png')}
 						style={{
-							width: 200,
-							aspectRatio: 1,
+							width: GetScaledValue(100),
+							height: GetScaledValue(100),
 						}}
 					/>
 				) : (
@@ -163,8 +169,8 @@ export const FocusableTopSection = ({
 						entering={FadeIn.duration(1000)}
 						exiting={FadeOut.duration(1000)}
 						style={{
-							width: 110,
-							aspectRatio: 1,
+							width: GetScaledValue(100),
+							height: GetScaledValue(100),
 							backgroundColor: 'red',
 							borderWidth: focused ? 5 : 0,
 							borderColor: '#ffbc00',

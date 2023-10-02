@@ -1,7 +1,7 @@
 import { Image } from 'react-native';
 import React from 'react';
 import { useApp } from '../../context';
-import LinearGradient from 'react-native-linear-gradient';
+import LinearGradient from '../Gradient';
 
 interface DataModel {
 	albumId: number;

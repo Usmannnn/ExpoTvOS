@@ -5007,11 +5007,6 @@ expo-keep-awake@~12.3.0:
   resolved "https://registry.yarnpkg.com/expo-keep-awake/-/expo-keep-awake-12.3.0.tgz#c42449ae19c993274ddc43aafa618792b6aec408"
   integrity sha512-ujiJg1p9EdCOYS05jh5PtUrfiZnK0yyLy+UewzqrjUqIT8eAGMQbkfOn3C3fHE7AKd5AefSMzJnS3lYZcZYHDw==
 
-expo-linear-gradient@~12.3.0:
-  version "12.3.0"
-  resolved "https://registry.yarnpkg.com/expo-linear-gradient/-/expo-linear-gradient-12.3.0.tgz#7abd8fedbf0138c86805aebbdfbbf5e5fa865f19"
-  integrity sha512-f9e+Oxe5z7fNQarTBZXilMyswlkbYWQHONVfq8MqmiEnW3h9XsxxmVJLG8uVQSQPUsbW+x1UUT/tnU6mkMWeLg==
-
 expo-modules-autolinking@1.5.1:
   version "1.5.1"
   resolved "https://registry.yarnpkg.com/expo-modules-autolinking/-/expo-modules-autolinking-1.5.1.tgz#363f90c172769ce12bf56c7be9ca0897adfc7a81"
@@ -9069,6 +9064,11 @@ react-native-video@^5.2.1:
     keymirror "^0.1.1"
     prop-types "^15.7.2"
     shaka-player "^2.5.9"
+
+react-native-web-linear-gradient@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/react-native-web-linear-gradient/-/react-native-web-linear-gradient-1.1.2.tgz#33f85f7085a0bb5ffa5106faf02ed105b92a9ed7"
+  integrity sha512-SmUnpwT49CEe78pXvIvYf72Es8Pv+ZYKCnEOgb2zAKpEUDMo0+xElfRJhwt5nfI8krJ5WbFPKnoDgD0uUjAN1A==
 
 react-native-web@^0.19.9:
   version "0.19.9"

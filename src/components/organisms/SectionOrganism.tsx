@@ -1,4 +1,4 @@
-import { FlatList, View } from 'react-native';
+import { Dimensions, FlatList, View } from 'react-native';
 import React, { useCallback, useRef } from 'react';
 import { IData } from '../../context/App/initialState';
 import ItemOrganism from './ItemOrganism';
@@ -63,6 +63,7 @@ const SectionOrganism = ({
 				ref={listRef}
 				horizontal
 				style={{
+					width: Dimensions.get('screen').width,
 					paddingLeft: GetScaledValue(200),
 				}}
 				ListFooterComponent={() => {

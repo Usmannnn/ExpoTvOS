@@ -12,6 +12,9 @@ module.exports = async function (env, argv) {
 	config.resolve.alias['../Utilities/Platform'] =
 		'react-native-web/dist/exports/Platform';
 
+	config.resolve.alias['react-native-linear-gradient'] =
+		'react-native-web-linear-gradient';
+
 	// Maybe you want to turn off compression in dev mode.
 	if (config.mode === 'development') {
 		config.devServer.compress = false;
