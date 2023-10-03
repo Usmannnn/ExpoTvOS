@@ -70,7 +70,7 @@ const Sidebar = () => {
 					</View>
 				</FocusContext.Provider>
 			</Animated.View>
-			{hasFocusedChild && <SidebarOverlay />}
+			<SidebarOverlay hasFocusedChild={hasFocusedChild} />
 		</>
 	);
 };

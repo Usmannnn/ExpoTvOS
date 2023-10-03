@@ -345,6 +345,7 @@ CreateBuildDescription
 ClangStatCache /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/AppleTVSimulator.platform/Developer/SDKs/AppleTVSimulator17.0.sdk /Users/osmanoruc/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/appletvsimulator17.0-21J351-25a0e40260bb3038152d97ad1df42a55.sdkstatcache
     cd /Users/osmanoruc/Desktop/ExpoTvos/ios
     /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/AppleTVSimulator.platform/Developer/SDKs/AppleTVSimulator17.0.sdk -o /Users/osmanoruc/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/appletvsimulator17.0-21J351-25a0e40260bb3038152d97ad1df42a55.sdkstatcache
+Base directory status changed. Regenerating...
 
 warning: Run script build phase 'Bundle React Native Code And Images' will be run during every build because it does not specify any outputs. To address this warning, either add output dependencies to the script phase, or configure it to run in every build by unchecking "Based on dependency analysis" in the script phase. (in target 'ExpoTvos-tvOS' from project 'ExpoTvos')
 warning: Run script build phase 'Start Packager' will be run during every build because it does not specify any outputs. To address this warning, either add output dependencies to the script phase, or configure it to run in every build by unchecking "Based on dependency analysis" in the script phase. (in target 'ExpoTvos-tvOS' from project 'ExpoTvos')
@@ -904,12 +905,12 @@ PhaseScriptExecution Bundle\ React\ Native\ Code\ And\ Images /Users/osmanoruc/L
 Skipping bundling in Debug for the Simulator (since the packager bundles for you). Use the FORCE_BUNDLING flag to change this behavior.
 + exit 0
 
+/Users/osmanoruc/Desktop/ExpoTvos/ios/Pods/Pods.xcodeproj: warning: The tvOS Simulator deployment target 'TVOS_DEPLOYMENT_TARGET' is set to 9.0, but the range of supported deployment target versions is 12.0 to 17.0.99. (in target 'BVLinearGradient-tvOS' from project 'Pods')
+/Users/osmanoruc/Desktop/ExpoTvos/ios/Pods/Pods.xcodeproj: warning: The tvOS Simulator deployment target 'TVOS_DEPLOYMENT_TARGET' is set to 11.0, but the range of supported deployment target versions is 12.0 to 17.0.99. (in target 'fmt-tvOS' from project 'Pods')
+/Users/osmanoruc/Desktop/ExpoTvos/ios/Pods/Pods.xcodeproj: warning: The tvOS Simulator deployment target 'TVOS_DEPLOYMENT_TARGET' is set to 9.0, but the range of supported deployment target versions is 12.0 to 17.0.99. (in target 'react-native-video-tvOS' from project 'Pods')
+/Users/osmanoruc/Desktop/ExpoTvos/ios/Pods/Pods.xcodeproj: warning: The tvOS Simulator deployment target 'TVOS_DEPLOYMENT_TARGET' is set to 11.0, but the range of supported deployment target versions is 12.0 to 17.0.99. (in target 'RNScreens-tvOS' from project 'Pods')
 /Users/osmanoruc/Desktop/ExpoTvos/ios/Pods/Pods.xcodeproj: warning: The tvOS Simulator deployment target 'TVOS_DEPLOYMENT_TARGET' is set to 10.0, but the range of supported deployment target versions is 12.0 to 17.0.99. (in target 'libevent-tvOS' from project 'Pods')
 /Users/osmanoruc/Desktop/ExpoTvos/ios/Pods/Pods.xcodeproj: warning: The tvOS Simulator deployment target 'TVOS_DEPLOYMENT_TARGET' is set to 9.0, but the range of supported deployment target versions is 12.0 to 17.0.99. (in target 'RNReanimated-tvOS' from project 'Pods')
-/Users/osmanoruc/Desktop/ExpoTvos/ios/Pods/Pods.xcodeproj: warning: The tvOS Simulator deployment target 'TVOS_DEPLOYMENT_TARGET' is set to 11.0, but the range of supported deployment target versions is 12.0 to 17.0.99. (in target 'fmt-tvOS' from project 'Pods')
-/Users/osmanoruc/Desktop/ExpoTvos/ios/Pods/Pods.xcodeproj: warning: The tvOS Simulator deployment target 'TVOS_DEPLOYMENT_TARGET' is set to 9.0, but the range of supported deployment target versions is 12.0 to 17.0.99. (in target 'BVLinearGradient-tvOS' from project 'Pods')
-/Users/osmanoruc/Desktop/ExpoTvos/ios/Pods/Pods.xcodeproj: warning: The tvOS Simulator deployment target 'TVOS_DEPLOYMENT_TARGET' is set to 11.0, but the range of supported deployment target versions is 12.0 to 17.0.99. (in target 'RNScreens-tvOS' from project 'Pods')
-/Users/osmanoruc/Desktop/ExpoTvos/ios/Pods/Pods.xcodeproj: warning: The tvOS Simulator deployment target 'TVOS_DEPLOYMENT_TARGET' is set to 9.0, but the range of supported deployment target versions is 12.0 to 17.0.99. (in target 'react-native-video-tvOS' from project 'Pods')
 /Users/osmanoruc/Desktop/ExpoTvos/ios/Pods/Pods.xcodeproj: warning: The tvOS Simulator deployment target 'TVOS_DEPLOYMENT_TARGET' is set to 11.0, but the range of supported deployment target versions is 12.0 to 17.0.99. (in target 'SocketRocket-tvOS' from project 'Pods')
 ** BUILD SUCCEEDED **
 

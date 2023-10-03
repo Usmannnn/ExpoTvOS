@@ -1,10 +1,14 @@
 import { Dimensions, StyleSheet } from 'react-native';
 import React from 'react';
 import Animated, { FadeIn, FadeOut, Layout } from 'react-native-reanimated';
-import { GetScaledValue } from '../methods';
-import LinearGradient from './Gradient';
+import { GetScaledValue } from '../../methods';
+import LinearGradient from '../Gradient';
 
-const SidebarOverlay = () => {
+const SidebarOverlay = ({ hasFocusedChild }: { hasFocusedChild: boolean }) => {
+	if (!hasFocusedChild) {
+		return null;
+	}
+
 	return (
 		<Animated.View
 			layout={Layout}
@@ -20,7 +24,7 @@ const SidebarOverlay = () => {
 					layout={Layout}
 					entering={FadeIn.duration(1000)}
 					exiting={FadeOut.duration(1000)}
-					source={require('../../assets/tod-logo.png')}
+					source={require('../../../assets/tod-logo.png')}
 					style={styles.image}
 				/>
 			</LinearGradient>
