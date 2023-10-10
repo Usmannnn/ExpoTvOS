@@ -10,8 +10,8 @@ import Animated, {
 	useAnimatedStyle,
 	withTiming,
 } from 'react-native-reanimated';
-// import Video from 'react-native-video';
 import { GetScaledValue } from '../../methods';
+// import VideoPlayer from '../VideoPlayer';
 
 const ItemOrganism = ({
 	item,
@@ -62,7 +62,6 @@ const ItemOrganism = ({
 		},
 		extraProps: { rightFocusKey, leftFocusKey, downFocusKey, upFocusKey },
 	});
-	const video = React.useRef(null);
 	const [expand, setExpand] = useState(false);
 
 	const animatedStyle = useAnimatedStyle(() => {
@@ -84,45 +83,16 @@ const ItemOrganism = ({
 							? focused
 								? 'red'
 								: '#187af2'
-							: 'transparent',
+							: 'black',
 						overflow: 'hidden',
 					},
 				]}>
 				{!item.uri ? (
 					<Text style={{ fontSize: GetScaledValue(28) }}>{_focusKey}</Text>
 				) : expand ? (
-					<Text>Video</Text>
+					// <VideoPlayer uri={item.uri} />
+					<Text style={{ fontSize: GetScaledValue(28) }}>Video</Text>
 				) : (
-					// <Video
-					// 	ref={video}
-					// 	source={{ uri: item.uri }}
-					// 	style={{ ...StyleSheet.absoluteFillObject }}
-					// 	resizeMode="cover"
-					// 	// rate={this.state.rate}
-					// 	// paused={this.state.paused}
-					// 	// volume={this.state.volume}
-					// 	// muted={this.state.muted}
-					// 	// fullscreen={this.state.fullscreen}
-					// 	// controls={this.state.showRNVControls}
-					// 	// resizeMode={this.state.resizeMode}
-					// 	// onLoad={this.onLoad}
-					// 	// onAudioTracks={this.onAudioTracks}
-					// 	// onTextTracks={this.onTextTracks}
-					// 	// onProgress={this.onProgress}
-					// 	// onEnd={this.onEnd}
-					// 	// progressUpdateInterval={1000}
-					// 	// onError={this.onError}
-					// 	// onAudioBecomingNoisy={this.onAudioBecomingNoisy}
-					// 	// onAudioFocusChanged={this.onAudioFocusChanged}
-					// 	// onLoadStart={this.onVideoLoadStart}
-					// 	// onVideoAspectRatio={this.onAspectRatio}
-					// 	// onReadyForDisplay={this.onReadyForDisplay}
-					// 	// onBuffer={this.onVideoBuffer}
-					// 	// repeat={this.state.loop}
-					// 	// selectedTextTrack={this.state.selectedTextTrack}
-					// 	// selectedAudioTrack={this.state.selectedAudioTrack}
-					// 	// playInBackground={false}
-					// />
 					<Animated.Image
 						source={item.poster}
 						style={animatedStyle}

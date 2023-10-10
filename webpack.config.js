@@ -15,16 +15,6 @@ module.exports = async function (env, argv) {
 	config.resolve.alias['react-native-linear-gradient'] =
 		'react-native-web-linear-gradient';
 
-	// Maybe you want to turn off compression in dev mode.
-	if (config.mode === 'development') {
-		config.devServer.compress = false;
-	}
-
-	// Or prevent minimizing the bundle when you build.
-	if (config.mode === 'production') {
-		config.optimization.minimize = false;
-	}
-
 	// Finally return the new config for the CLI to use.
 	return config;
 };

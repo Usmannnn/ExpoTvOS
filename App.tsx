@@ -29,7 +29,7 @@ const App = () => {
 	}, []);
 
 	return (
-		<View style={{ flex: 1, overflow: 'hidden' }}>
+		<View style={{ flex: 1, overflow: 'scroll' }}>
 			<GlobalContextProvider>
 				<Pressable
 					hasTVPreferredFocus={true}

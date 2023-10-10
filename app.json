@@ -2,6 +2,6 @@
   "name": "ExpoTvos",
   "displayName": "ExpoTvos",
   "web": {
-    "bundler": "metro"
+    "bundler": "webpack"
   }
 }

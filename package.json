@@ -6,6 +6,7 @@
     "android": "expo run:android",
     "ios": "expo run:ios",
     "web": "expo start --web",
+    "webbuild": "npx expo export:web",
     "start": "expo start",
     "tvos": "expo run:ios --scheme ExpoTvos-tvOS --device \"Apple TV\"",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",

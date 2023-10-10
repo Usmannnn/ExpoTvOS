@@ -79,14 +79,13 @@ export default Sidebar;
 
 const styles = StyleSheet.create({
 	container: {
-		width: GetScaledValue(200),
 		position: 'absolute',
 		left: 0,
 		top: 0,
 		bottom: 0,
-		backgroundColor: 'black',
 		zIndex: 999,
 		alignItems: 'center',
+		width: GetScaledValue(200),
 		paddingVertical: GetScaledValue(100),
 	},
 });

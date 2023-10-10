@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
 		zIndex: 998,
 	},
 	image: {
-		width: GetScaledValue(200),
+		width: GetScaledValue(210),
 		aspectRatio: 0.1,
 		position: 'absolute',
 		zIndex: 997,
